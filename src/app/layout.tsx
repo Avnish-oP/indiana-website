@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import Navbar from "@/components/Navbar";
+import Head from "next/head";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,7 +18,17 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <Head>
+        <style>
+          @import
+          url('https://fonts.googleapis.com/css2?family=Bellefair&display=swap');
+        </style>
+      </Head>
+      <body className={inter.className}>
+        <Navbar />
+        <div className="min-h-screen">{children}</div>
+        <div>footer</div>
+      </body>
     </html>
   );
 }

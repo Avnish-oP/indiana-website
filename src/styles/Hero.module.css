@@ -1,0 +1,44 @@
+.navbar {
+    background: transparent;
+    transition: background-color 0.3s ease;
+}
+
+.scrolled {
+    background: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.nav-link {
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.nav-link-button {
+    background-color: #d4af37;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 9999px;
+    transition: background-color 0.3s ease;
+}
+
+.scrolled .nav-link {
+    color: black;
+}
+
+.scrolled .nav-link-button {
+    background-color: #d4af37;
+}
+.heroBackground {
+    background-image: url('../../public/images/Hero.jpg'); /* Replace with actual image path */
+    background-size: cover;
+    background-position: center;
+    position: relative;
+  }
+  
+  .heroBackground::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5); /* Dark filter */
+  }
+  
