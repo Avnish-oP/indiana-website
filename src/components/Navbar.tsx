@@ -25,7 +25,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed w-full text-[#C8A26B] z-10 transition-colors duration-300 ${
+      className={`fixed w-full text-[#C8A26B] z-20 transition-colors duration-300 ${
         scroll ? "bg-white shadow-md" : "bg-transparent"
       }`}
     >

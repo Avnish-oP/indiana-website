@@ -7,10 +7,16 @@ const Hero = () => {
   const [index, setIndex] = useState(0);
 
   const texts = [
-    "Welcome to  our platform",
-    "Your journey  starts here",
-    "Unlock your  potential",
+    "Welcome to Indiana  Merchandise",
+    "Where Exquisite Craftsmanship  Meets Unparalleled Quality",
+    "Where Luxury Meets  Imagination: The Essence of Elegance with INDIANA MERCHANDISING",
   ];
+  
+  const getFontSize = (text:string) => {
+    if (text.length < 30) return "text-6xl"; // Large text for short slogans
+    if (text.length < 60) return "text-3xl"; // Medium text for medium-length slogans
+    return "text-2xl"; // Small text for long slogans
+  };
 
   const handleClick = (newIndex: number) => {
     setIndex(newIndex);
@@ -30,10 +36,10 @@ const Hero = () => {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -30 }}
               transition={{ duration: 0.6 }}
-              className="text-4xl md:text-5xl lg:text-6xl font-bold"
+              className={`text-4xl  md:text-5xl lg:text-6xl  font-bold`}
             >
               {texts[index].split(" ").map((word, i) =>
-                i === 1 ? (
+                i === 2 ? (
                   <span key={i} className="relative inline-block">
                     {word}
                     <svg
@@ -56,11 +62,11 @@ const Hero = () => {
               )}
             </motion.h1>
           </AnimatePresence>
-          <button className="absolute sm:top-2/3 top-[63%] sm:left-[42vw] left-[30vw]  px-6 py-3 bg-[#C8A26B] rounded-full text-lg font-semibold transition-colors duration-300 hover:bg-white hover:text-[#C8A26B]">
+          <button className="absolute sm:top-2/3 md:top-[70%] top-[70%] sm:left-[42vw] left-[30vw]  px-6 py-3 bg-[#C8A26B] rounded-full text-lg font-semibold transition-colors duration-300 hover:bg-white hover:text-[#C8A26B]">
             Get Started
             </button>
         </div>
-        <div className="absolute right-8 sm:top-1/2 top-2/3  transform -translate-y-1/2 flex flex-col  space-y-4">
+        <div className="absolute md:right-8 right-2 md:top-1/2 top-[82%]  transform -translate-y-1/2 flex flex-col  space-y-4">
           {texts.map((_, i) => (
             <button
               key={i}
