@@ -2,9 +2,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import image from "../../public/images/hero.jpg";
-import temple from "../../public/images/temple.jpg";
-import beautiful from "../../public/images/beautiful.jpeg";
+
 
 const services = [
   {
@@ -12,7 +10,7 @@ const services = [
     title: "Product Sourcing",
     description:
       "Finding high-quality products from trusted suppliers worldwide.",
-    image: image,
+    image: "/images/Hero.jpg",
     svg: `
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-10 h-10 text-[#C8A26B]">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zm0 5h18v9a1 1 0 01-1 1H4a1 1 0 01-1-1V9zm10 3h4m-4 2h2m-6-2H7m-2 0h2m-2 2h2" />
@@ -24,7 +22,7 @@ const services = [
     title: "Logistics Management",
     description:
       "Ensuring efficient and timely delivery of goods to your business.",
-    image: temple,
+    image: "/images/temple.jpg",
     svg: `
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-10 h-10 text-[#C8A26B]">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 2a3 3 0 00-3 3v14a3 3 0 006 0V5a3 3 0 00-3-3zM9 8h6M9 12h6M12 16v.01" />
@@ -36,7 +34,7 @@ const services = [
     title: "Quality Assurance",
     description:
       "Providing thorough quality checks to ensure product excellence.",
-    image: beautiful,
+    image: "/images/beautiful.jpeg",
     svg: `
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-10 h-10 text-[#C8A26B]">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
@@ -81,6 +79,7 @@ export default function ServiceSection() {
                 src={service.image}
                 alt={service.title}
                 width={400}
+                height={400}
                 className="object-cover object-center w-full max-h-72"
               />
             </motion.div>
