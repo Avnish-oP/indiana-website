@@ -2,9 +2,9 @@
 import React from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import image from "@/../public/images/hero.jpg";
-import temple from "@/../public/images/temple.jpg";
-import beautiful from "@/../public/images/beautiful.jpeg";
+import image from "../../public/images/hero.jpg";
+import temple from "../../public/images/temple.jpg";
+import beautiful from "../../public/images/beautiful.jpeg";
 
 const services = [
   {
