@@ -76,7 +76,7 @@ export const StickyScroll = ({
     <div className="flex space-x-0 cursor-all-scroll ">
       <motion.div
         animate={{ backgroundColor: backgroundColors[activeCategory % backgroundColors.length] }}
-        className="h-[30rem] lg:w-1/3 overflow-y-auto relative space-x-10  p-10  no-scrollbar "
+        className="h-[30rem] lg:w-1/3 overflow-y-auto relative space-x-10  p-10  no-scrollbar lg:pl-32 md:pl-10  "
         ref={categoryRef}
       >
         <div className="relative flex flex-col items-center px-4">
@@ -106,7 +106,7 @@ export const StickyScroll = ({
 
       <motion.div
         animate={{ backgroundColor: backgroundColors[activeProduct % backgroundColors.length] }}
-        className="h-[30rem] md:w-2/3 flex justify-center md:justify-around overflow-y-auto relative space-x-10  p-10  no-scrollbar"
+        className="h-[30rem] md:w-2/3 flex justify-center md:justify-around overflow-y-auto relative space-x-10  p-10  no-scrollbar lg:pr-32  md:pr-10"
         ref={productRef}
       >
         <div className="relative flex flex-col items-center px-4">
