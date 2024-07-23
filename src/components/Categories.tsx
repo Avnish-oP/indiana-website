@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import { StickyScroll } from "./ui/sticky-scroll-reveal";
+import { ScrollableCategories } from "./ui/sticky-scroll-reveal-2";
 
 const categories = [
     {
@@ -400,7 +401,8 @@ const categories = [
 export default function Categories() {
   return (
     <div className="">
-      <StickyScroll categories={categories} />
+      {/* <StickyScroll categories={categories} /> */}
+      <ScrollableCategories categories={categories} />
     </div>
   );
 }

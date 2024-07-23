@@ -25,7 +25,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed w-full text-[#C8A26B] z-20 transition-colors duration-300 ${
+      className={`fixed w-full text-[#C8A26B] z-20 transition-colors duration-300 gilda-display-regular ${
         scroll ? "bg-white shadow-md" : "bg-transparent"
       }`}
     >
@@ -48,7 +48,7 @@ const Navbar = () => {
             </Link>
           </div>
           <div className="hidden md:flex md:items-center md:space-x-6 z-30">
-            {["Home", "About", "Services", "Contact"].map((item) => (
+            {["Home", "About", "Contacts", "Categories"].map((item) => (
               <Link
                 key={item}
                 href={`/${item.toLowerCase()}`}

@@ -1,4 +1,5 @@
 import Categories from "@/components/Categories";
+import ContactUs from "@/components/ContactUs";
 import FaqAccordion from "@/components/Faq";
 import Hero from "@/components/Hero";
 import  ServicesSection  from "@/components/OurServices";
@@ -15,6 +16,7 @@ export default function Home() {
       <StatsBar />
       <ServicesSection />
       <FaqAccordion />
+      <ContactUs />
     </main>
     
   );
