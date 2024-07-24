@@ -13,7 +13,7 @@ const ContactUs = () => {
             <ContactForm />
           </div>
           <div className="hidden md:block">
-            <h3 className="text-3xl font-bold text-gray-800 dark:text-[#C8A26B] mb-4">We'd love to hear from you!</h3>
+            <h3 className="text-3xl font-bold text-gray-800 dark:text-[#C8A26B] mb-4">We&apos;d love to hear from you!</h3>
             <div className="mb-6">
               <Image src="/images/hero.jpg" width={400} height={400} alt="Contact Us" className="rounded-lg shadow-lg" />
             </div>
