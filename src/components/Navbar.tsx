@@ -7,6 +7,9 @@ import logo from "../../public/logo.svg";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scroll, setScroll] = useState(false);
+  const [showNav, setShowNav] = useState(true);
+
+  let lastScrollY = 0;
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -15,6 +18,14 @@ const Navbar = () => {
   useEffect(() => {
     const handleScroll = () => {
       setScroll(window.scrollY > 5);
+      if (window.scrollY > lastScrollY) {
+        // Scrolling down
+        setShowNav(false);
+      } else {
+        // Scrolling up
+        setShowNav(true);
+      }
+      lastScrollY = window.scrollY;
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -25,9 +36,9 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed w-full text-[#C8A26B] z-20 transition-colors duration-300 gilda-display-regular ${
+      className={`fixed w-full text-[#C8A26B] z-20 transition-all duration-300 gilda-display-regular ${
         scroll ? "bg-white shadow-md" : "bg-transparent"
-      }`}
+      } ${showNav ? "top-0" : "-top-16"}`}
     >
       <div className="mx-auto px-4 sm:px-6 lg:px-20">
         <div className="flex items-center justify-between h-16">

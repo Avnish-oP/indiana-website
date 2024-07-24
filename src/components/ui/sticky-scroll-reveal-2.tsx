@@ -1,7 +1,6 @@
 "use client";
 import React, { useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
- // Adjust the path as needed
 
 export const ScrollableCategories = ({
   categories,
@@ -24,7 +23,7 @@ export const ScrollableCategories = ({
     if (categoryRefs.current[activeCategory]) {
       categoryRefs.current[activeCategory].scrollIntoView({
         behavior: "smooth",
-        block: "center",
+        block: "nearest",
         inline: "center",
       });
     }
@@ -53,7 +52,9 @@ export const ScrollableCategories = ({
                   ? "text-[#C8A26B] font-bold scale-110"
                   : "text-gray-600 opacity-50 scale-90"
               }`}
-              ref={(el) => (categoryRefs.current[index] = el as HTMLDivElement)}
+              ref={(el) => {
+                categoryRefs.current[index] = el as HTMLDivElement;
+              }}
             >
               <svg width="10" height="10" xmlns="http://www.w3.org/2000/svg" className="transform rotate-90 mr-4">
                 <defs>
