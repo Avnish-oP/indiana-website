@@ -50,7 +50,7 @@ const Services = () => (
         Our Services
       </h2>
       <p className="text-center mb-12 text-lg bellefair-regular italic">
-        {'"'}Indiana Buying House offers a range of services to meet all your needs.{'"'}
+      &quot; Indiana Buying House offers a range of services to meet all your needs.&quot;
       </p>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
         {services.map((service, index) => (
