@@ -1,8 +1,7 @@
 "use client";
-import React from "react";
-import { motion } from "framer-motion";
+import React, { useRef, useEffect, useState } from "react";
+import { motion, useAnimation } from "framer-motion";
 import Image from "next/image";
-
 
 const services = [
   {
@@ -43,49 +42,89 @@ const services = [
   },
 ];
 
+const ServiceCard = ({ service, index }: { service: any, index: number }) => {
+  const controls = useAnimation();
+  const ref = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          controls.start("visible");
+        }
+      },
+      { threshold: 0.5 }
+    );
+
+    if (ref.current) {
+      observer.observe(ref.current);
+    }
+
+    return () => {
+      if (ref.current) {
+        observer.unobserve(ref.current);
+      }
+    };
+  }, [controls]);
+
+  const cardVariants = {
+    hidden: { opacity: 0, x: -100 },
+    visible: { opacity: 1, x: 0 },
+  };
+
+  const imageWrapperVariants = {
+    hidden: { scaleX: 0 },
+    visible: { scaleX: 1 },
+  };
+
+  return (
+    <div ref={ref} className="flex md:flex-row items-center md:mx-20  md:space-y-0 md:-space-x-16 -space-x-8 mb-10 overflow-hidden">
+      <motion.div
+        className="flex-1 p-4 md:p-5 lg:p-10 bg-white  shadow-lg rounded-2xl relative z-10"
+        initial="hidden"
+        animate={controls}
+        variants={cardVariants}
+        transition={{ duration: 0.5, delay: index * 0.2 }}
+      >
+        <div dangerouslySetInnerHTML={{ __html: service.svg }} />
+        <h2 className="text-xl md:text-2xl lg:text-3xl font-bold text-gray-800  my-4">
+          {service.title}
+        </h2>
+        <p className="text-gray-600 dark:text-gray-400 my-2">{service.description}</p>
+      </motion.div>
+      <motion.div
+        className="flex-1  md:block overflow-hidden rounded-2xl relative"
+        initial="hidden"
+        animate={controls}
+        variants={imageWrapperVariants}
+        transition={{ duration: 0.5, delay: index * 0.2 + 0.5 }}
+        style={{ transformOrigin: "left" }}
+      >
+        <Image
+          src={service.image}
+          alt={service.title}
+          width={400}
+          height={200}
+          className="object-cover object-center w-full h-64 md:h-80 lg:h-76"
+        />
+      </motion.div>
+    </div>
+  );
+};
+
 export default function ServiceSection() {
   return (
-    <div className="p-10 space-y-10 lg:mx-16">
-      <h1 className="text-4xl font-bold text-center text-[#C8A26B] antialiased">
-        Why Choose Us?
-      </h1>
-      {services.map((service, index) => (
-        <div key={service.id} className="flex items-center  -space-x-20">
-          <motion.div
-            className="flex-1 p-5 h-52 bg-white shadow-lg rounded-2xl relative  z-10"
-            initial={{ opacity: 0, x: -100 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5, delay: index * 0.2 }}
-          >
-            <div dangerouslySetInnerHTML={{ __html: service.svg }} />
-            <h2 className="text-xl font-bold text-gray-800 mt-4">
-              {service.title}
-            </h2>
-            <p className="text-gray-600 mt-2">{service.description}</p>
-          </motion.div>
-          <motion.div
-            className="flex-1 overflow-hidden rounded-2xl z-0"
-            initial={{ x: -100, opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
-            transition={{ duration: 0.5, delay: index * 0.2 }}
-          >
-            <motion.div
-              initial={{ scaleX: 0 }}
-              animate={{ scaleX: 1 }}
-              transition={{ duration: 0.5, delay: index * 0.2 + 0.5 }} // Adjust delay as needed
-              style={{ transformOrigin: "left" }}
-            >
-              <Image
-                src={service.image}
-                alt={service.title}
-                width={400}
-                height={400}
-                className="object-cover object-center w-full max-h-72"
-              />
-            </motion.div>
-          </motion.div>
+    <section className="py-16 bg-gray-100 ">
+      <div className="container mx-auto px-4">
+        <h1 className="text-4xl font-bold text-center text-[#C8A26B] antialiased mb-12">
+          Why Choose Us?
+        </h1>
+        <div className="space-y-10">
+          {services.map((service, index) => (
+            <ServiceCard key={service.id} service={service} index={index} />
+          ))}
         </div>
-      ))}
-    </div>
+      </div>
+    </section>
   );
 }
