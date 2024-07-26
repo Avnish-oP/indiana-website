@@ -19,7 +19,7 @@ const About = () => {
           <h1 className="text-5xl font-bold">Indiana Merchandising</h1>
         </div>
         <div className="bg-white shadow-lg rounded-3xl p-10 max-w-2xl mx-auto mb-10">
-          <h2 className="text-3xl font-bold mb-4">Founder's Note</h2>
+          <h2 className="text-3xl font-bold mb-4">Founder&apos;s Note</h2>
           <p className="text-gray-700 text-lg">
             Welcome to Indiana Merchandise, where we are dedicated to
             delivering unparalleled quality and craftsmanship. Our commitment to
