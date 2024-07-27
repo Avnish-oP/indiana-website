@@ -33,7 +33,7 @@ const StatsBar = () => {
             <AnimatedNumber value={stat.value} />
             <p className="text-gray-800 text-lg ml-2">{stat.label}</p>
             {index < stats.length - 1 && (
-              <div className="hidden md:block w-1 h-16 bg-gray-300 mx-6"></div>
+              <div className="hidden md:block w-[0.09rem] h-16 bg-gray-300 mx-6"></div>
             )}
           </div>
         ))}

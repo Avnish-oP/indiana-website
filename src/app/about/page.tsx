@@ -16,7 +16,7 @@ const About = () => {
             height={300}
             className="mx-auto hover:scale-105 drop-shadow-2xl transition-all duration-300 bg-transparent"
           />
-          <h1 className="text-5xl font-bold">Indiana Merchandising</h1>
+          <h1 className="text-5xl font-normal">Indiana Merchandising</h1>
         </div>
         <div className="bg-white shadow-lg rounded-3xl p-10 max-w-2xl mx-auto mb-10">
           <h2 className="text-3xl font-bold mb-4">Founder&apos;s Note</h2>
