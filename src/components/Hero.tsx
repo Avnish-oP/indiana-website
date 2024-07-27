@@ -11,7 +11,7 @@ const Hero = () => {
   const texts = [
     "Welcome to Indiana  Merchandise",
     "Where Exquisite Craftsmanship  Meets Unparalleled Quality",
-    "Where Luxury Meets  Imagination: The Essence of Elegance with INDIANA MERCHANDISING",
+    "Luxury Meets Imagination: The Essence of Elegance with INDIANA MERCHANDISING",
   ];
 
   const getFontSize = (text: string) => {
@@ -47,14 +47,14 @@ const Hero = () => {
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 200 20"
-                      className="absolute left-0  -bottom-1 w-full h-5 text-[#C8A26B]"
+                      className="absolute left-0  -bottom-3 w-full h-5 text-[#C8A26B]"
                       preserveAspectRatio="none"
                     >
                       <path
-                        d="M0,10 Q50,20 100,10 T200,10"
+                        d="M0,15 Q50,0 100,0 T200,15"
                         fill="none"
                         stroke="currentColor"
-                        strokeWidth="4"
+                        strokeWidth="3"
                       />
                     </svg>
                   </span>
@@ -83,10 +83,10 @@ const Hero = () => {
           {texts.map((_, i) => (
             <button
               key={i}
-              className={`px-4 py-2 rounded-full text-sm font-semibold transition-colors duration-300 ${
+              className={`px-3 py-1 rounded-full text-lg md:text-xl font-normal transition-colors duration-300 ${
                 i === index
-                  ? "bg-[#C8A26B] text-white"
-                  : "bg-white text-[#C8A26B]"
+                  ? "scale-125 bg-[#C8A26B] text-white"
+                  : "bg-gray-100 bg-opacity-60 text-gray-800"
               }`}
               onClick={() => handleClick(i)}
             >
