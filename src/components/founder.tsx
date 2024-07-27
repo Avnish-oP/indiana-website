@@ -53,20 +53,20 @@ const Founders = () => {
     <section className="bg-white py-20 text-[#C8A26B] gilda-display-regular">
       <div className="container mx-auto px-4 text-center">
         <h2 className="text-4xl font-bold mb-4">Meet Our Founders</h2>
-        <p className="text-xl italic mb-28">
+        <p className="text-xl italic mb-20">
         &quot; Success is best when it&apos;s shared.&quot;
         </p>
-        <div className="flex flex-col gap-16 md:flex-row justify-center items-center  space-y-10 md:space-y-0 md:space-x-10">
+        <div className="flex flex-col gap-0 md:flex-row justify-center items-center mb-8 space-y-10 md:space-y-0 md:space-x-8">
           {founders.map((founder, index) => (
-            <div key={index} className="relative group  w-72 h-80 flex-shrink-0 ">
-              <div className="absolute right-2 -top-6 left-10 -bottom-10 inset-0 border-4 opacity-50 border-gray-400 group-hover:border-[#C8A26B] transition-all group-hover:opacity-100 rounded-xl p-4  duration-300"></div>
+            <div key={index} className="relative group  w-[25rem] h-[28rem] flex-shrink-0 ">
+              <div className="absolute -right-4  -top-8 left-10 -bottom-20 inset-0 border-2 opacity-50 border-gray-400 group-hover:border-[#C8A26B] group-hover:bg-[#F8F5F0] transition-all group-hover:opacity-100 rounded-xl p-4  duration-300"></div>
               <div className="relative  z-10 flex  justify-center -space-x-4 items-center h-full p-4">
                 <Image
                   src={founder.image}
                   width={200}
                   height={400}
                   alt={founder.name}
-                  className="w-full h-full object-cover  rounded-xl mb-2 hover:scale-105 transition-transform duration-300"
+                  className="w-full h-full object-cover  rounded-xl mb-2 hover:scale-100 transition-transform duration-300"
                 />
                 <h3 className="text-2xl relative left-4 text-nowrap bg-clip-text -rotate-90  opacity-75 from-[#C8A26B] to-white font-bold  antialiased  group-hover:opacity-100 group-hover:bg-[#C8A26B] transition-opacity duration-300">
                   {founder.designation}
@@ -79,7 +79,7 @@ const Founders = () => {
               </Link>
                 
                
-                <h3 className="text-2xl bg-clip-text text-nowrap text-transparent bg-gradient-to-b from-[#C8A26B] to-white font-bold  antialiased  group-hover:opacity-100 group-hover:bg-[#C8A26B] transition-opacity duration-300">
+                <h3 className="text-2xl bg-clip-text text-nowrap text-transparent bg-gradient-to-b from-[#C8A26B] to-gray-200 font-bold   antialiased   transition-opacity duration-300">
                   {founder.name}
                 </h3>
               </div>
