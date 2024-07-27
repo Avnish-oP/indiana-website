@@ -26,29 +26,29 @@ const FAQAccordion = () => {
   ];
 
   return (
-    <div className="md:flex flex-col justify-center max-w-5xl items-center gap-6 md:mx-auto py-8 mt-4 mx-4 ">
+    <div className="md:flex flex-col justify-center max-w-[85rem] bg-white items-center gap-6 md:mx-auto py-8 mt-4 mx-4 gilda-display-regular ">
       <h2 className="lg:text-6xl md:text-4xl text-2xl font-semibold mb-6 text-[#c99245] antialiased">Frequently Asked Questions</h2>
-      <div className="bg-white shadow-md rounded-lg overflow-hidden w-full">
+      <div className="bg-white  rounded-lg overflow-hidden w-full">
         {faqs.map((faq, index) => (
-          <div key={index} className="border-b last:border-b-0 rounded-lg">
+          <div key={index} className={`border-2  md:p-4 my-4  rounded-2xl ${openIndex === index ? 'border-[#c99245 bg-[#F8F5F0]' : 'border-[#F8F5F0]'} `}>
             <button
               onClick={() => setOpenIndex(openIndex === index ? null : index)}
-              className="w-full px-4 py-6 text-left flex justify-between items-center hover:bg-[#fbc9828e]   focus:outline-none"
+              className="w-full px-4 py-4 text-left flex justify-between items-center    focus:outline-none"
             >
               <div className="flex items-center gap-2">
                 <motion.div
-                  className="flex items-center justify-center w-8 h-8 border- border-[#c99245] rounded-full"
-                  animate={{ backgroundColor: openIndex === index ? '#c99245' : '#f3f4f6', color: openIndex === index ? '#fff' : '#c99245' }}
-                  transition={{ duration: 0.3 }}
+                  className="flex items-center text-xl md:text-3xl  justify-center w-8 h-8 border- border-[#F8F5F0] rounded-full p-6"
+                  animate={{ backgroundColor: openIndex === index ? '#c99245' : '#f3f4f6', color: openIndex === index ? '#fff' : '#4b5563' }}
+                  transition={{ duration: 0.5 }}
                 >
-                  {index + 1}
+                  0{index + 1}
                 </motion.div>
-                <span className="font-semibold font-sans text-xl  text-gray-600 ml-2">{faq.question}</span>
+                <span className=" font-sans font-normal text-xl md:text-2xl  text-gray-600 ml-2">{faq.question}</span>
               </div>
               <motion.div
-                className="flex items-center justify-center w-8 h-8 border- border-[#c99245] rounded-full"
+                className="flex items-center justify-center w-8 h-8 border- border-[#F8F5F0] rounded-full"
                 animate={{ backgroundColor: openIndex === index ? '#c99245' : '#f3f4f6', color: openIndex === index ? '#fff' : '#c99245' }}
-                transition={{ duration: 0.3 }}
+                transition={{ duration: 0.5 }}
               >
                 <motion.svg
                   className="w-5 h-5"
@@ -57,7 +57,7 @@ const FAQAccordion = () => {
                   viewBox="0 0 24 24"
                   xmlns="http://www.w3.org/2000/svg"
                   animate={{ rotate: openIndex === index ? 180 : 0 }}
-                  transition={{ duration: 0.4 }}
+                  transition={{ duration: 0.5 }}
                 >
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
                 </motion.svg>
@@ -66,11 +66,11 @@ const FAQAccordion = () => {
             <AnimatePresence>
               {openIndex === index && (
                 <motion.div
-                  className="px-4 py-3 bg-[#fbc9828e]"
+                  className="px-4 py-3 bg-[#F8F5F0]"
                   initial={{ maxHeight: 0, opacity: 0 }}
                   animate={{ maxHeight: 500, opacity: 1 }} // You can adjust maxHeight as needed
                   exit={{ maxHeight: 0, opacity: 0 }}
-                  transition={{ duration: 0.3 }}
+                  transition={{ duration: 0.3}}
                   style={{ overflow: 'hidden' }} // Ensure content does not overflow
                 >
                   <p className='text-gray-700 antialiased'>{faq.answer}</p>

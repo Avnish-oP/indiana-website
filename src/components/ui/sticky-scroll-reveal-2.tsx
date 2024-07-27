@@ -19,15 +19,15 @@ export const ScrollableCategories = ({
   const [activeProduct, setActiveProduct] = useState(0);
   const categoryRefs = useRef<HTMLDivElement[]>([]);
 
-  useEffect(() => {
-    if (categoryRefs.current[activeCategory]) {
-      categoryRefs.current[activeCategory].scrollIntoView({
-        behavior: "smooth",
-        block: "nearest",
-        inline: "center",
-      });
-    }
-  }, [activeCategory]);
+  // useEffect(() => {
+  //   if (categoryRefs.current[activeCategory]) {
+  //     categoryRefs.current[activeCategory].scrollIntoView({
+  //       behavior: "smooth",
+  //       block: "nearest",
+  //       inline: "center",
+  //     });
+  //   }
+  // }, [activeCategory]);
 
   const handleCategoryClick = (index: number) => {
     setActiveCategory(index);
