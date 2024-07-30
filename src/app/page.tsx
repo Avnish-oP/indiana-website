@@ -7,6 +7,7 @@ import  ServicesSection  from "@/components/OurServices";
 import Services from "@/components/Services";
 import StatsBar from "@/components/Stats";
 import Head from "next/head";
+import VideoComponent from "@/components/VideoComponent";
 
 
 
@@ -29,6 +30,7 @@ export default function Home() {
       <Founders />
       <ServicesSection />
       <FaqAccordion />
+      <VideoComponent /> 
       <ContactUs />
     </main>
     </>

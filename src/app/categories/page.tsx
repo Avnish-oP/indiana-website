@@ -15,7 +15,7 @@ import {
 export default function BentoGridDemo() {
   return (
     <>
-    <div className="pt-20 z-10 text-center font-bold md:text-4xl text-2xl mb-8 antialiased text-[#C8A26B]">Explore Our Categories</div>
+    <div className="pt-20 z-10 text-center  md:text-4xl text-2xl mb-8 antialiased text-[#C8A26B]">Explore Our Categories</div>
     <BentoGrid className="max-w-5xl mx-auto px-4">
       {items.map((item, i) => (
         <BentoGridItem

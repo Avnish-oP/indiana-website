@@ -9,7 +9,7 @@ const ContactUs = () => {
     <div className="bg-white text-[#C8A26B] py-20 px-4 gilda-display-regular">
       <div className="container mx-auto">
         <motion.h1
-          className="text-5xl font-bold text-center mb-10"
+          className="text-5xl  text-center mb-10"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1 }}
@@ -35,7 +35,7 @@ const ContactUs = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 1 }}
           >
-            <h2 className="text-3xl antialiased text-center font-bold mb-4">Contact Us</h2>
+            <h2 className="text-3xl antialiased text-center  mb-4">Contact Us</h2>
             <ContactForm />
           </motion.div>
 
@@ -46,7 +46,7 @@ const ContactUs = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 1.2 }}
           >
-            <h2 className="text-3xl font-bold mb-4">Contact Information</h2>
+            <h2 className="text-3xl  mb-4">Contact Information</h2>
             <p className="mb-4">
               <strong>Address:</strong> 123 Indiana Street, Merch City, IM 45678
             </p>
@@ -90,7 +90,7 @@ const ContactUs = () => {
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 1.5 }}
         >
-          <h2 className="text-3xl font-bold text-center mb-4">Our Location</h2>
+          <h2 className="text-3xl  text-center mb-4">Our Location</h2>
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3165.9984109919214!2d-122.08385118423891!3d37.3860512798291!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fb0b5a51b219d%3A0x37ab8e57c1ad7e28!2sGoogleplex!5e0!3m2!1sen!2sus!4v1617134171264!5m2!1sen!2sus"
             width="100%"

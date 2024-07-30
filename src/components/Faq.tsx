@@ -27,7 +27,7 @@ const FAQAccordion = () => {
 
   return (
     <div className="md:flex flex-col justify-center max-w-[85rem] bg-white items-center gap-6 md:mx-auto py-8 mt-4 mx-4 ">
-      <h2 className="lg:text-6xl md:text-4xl text-2xl font-semibold mb-6 text-[#c99245] antialiased">Frequently Asked Questions</h2>
+      <h2 className="lg:text-5xl  md:text-4xl text-2xl  mb-6 text-black antialiased">Frequently Asked Questions</h2>
       <div className="bg-white  rounded-lg overflow-hidden w-full">
         {faqs.map((faq, index) => (
           <div key={index} className={`border-2  md:p-4 my-4  rounded-2xl ${openIndex === index ? 'border-[#c99245 bg-[#F8F5F0]' : 'border-[#F8F5F0]'} `}>
@@ -67,13 +67,13 @@ const FAQAccordion = () => {
               {openIndex === index && (
                 <motion.div
                   className="px-4 py-3 bg-[#F8F5F0]"
-                  initial={{ maxHeight: 0, opacity: 0 }}
-                  animate={{ maxHeight: 500, opacity: 1 }} // You can adjust maxHeight as needed
-                  exit={{ maxHeight: 0, opacity: 0 }}
-                  transition={{ duration: 0.3}}
-                  style={{ overflow: 'hidden' }} // Ensure content does not overflow
+                  initial={{ scaleY: 0 }}
+                  animate={{ scaleY: 1 }}
+                  exit={{ scaleY: 0 }}
+                  transition={{ duration: 0.3 }}
+                  style={{ transformOrigin: 'top', overflow: 'hidden' }}
                 >
-                  <p className='text-gray-700 antialiased'>{faq.answer}</p>
+                  <p className='text-gray-700 antialiased inter-font'>{faq.answer}</p>
                 </motion.div>
               )}
             </AnimatePresence>
