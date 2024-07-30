@@ -37,7 +37,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed w-full text-[#C8A26B] z-20 transition-all duration-300 gilda-display-regular ${
+      className={`fixed w-full text-[#C8A26B] z-20 transition-all duration-300  ${
         scroll ? "bg-gradient-to-r from-white via-gray-100 to-white shadow-md" : "bg-transparent"
       } ${showNav ? "top-0" : "-top-16"}`}
     >

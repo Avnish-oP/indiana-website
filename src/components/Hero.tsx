@@ -16,8 +16,8 @@ const Hero = () => {
   }, []);
 
   const texts = [
-    "Welcome to Indiana Merchandise",
-    "Where Exquisite Craftsmanship Meets Unparalleled Quality",
+    "Welcome to Indiana  Merchandise",
+    "Where Exquisite Craftsmanship  Meets Unparalleled Quality",
     "Luxury Meets Imagination : The Essence of Elegance with INDIANA MERCHANDISING",
   ];
 
@@ -91,7 +91,7 @@ const Hero = () => {
 
   return (
     <section
-      className={`relative gilda-display-regular z-0 h-screen bg-cover bg-center ${styles.heroBackground} overflow-hidden`}
+      className={`relative z-0 h-screen bg-cover bg-center ${styles.heroBackground} overflow-hidden`}
     >
       <div className="absolute inset-0 bg-black opacity-50"></div>
       <div className="relative z-10 flex flex-col items-center justify-center h-full text-white text-center px-4">
@@ -106,7 +106,7 @@ const Hero = () => {
               exit="exit"
               className="flex flex-col items-center"
             >
-              <h1 className={`text-3xl md:text-5xl lg:text-6xl font-normal `}>
+              <h1 className={`text-3xl md:text-5xl lg:text-6xl font-normal`}>
                 {texts[index].split(" ").map((word, i) =>
                   i === 2 ? (
                     <span key={i} className="relative inline-block">

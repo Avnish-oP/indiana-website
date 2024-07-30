@@ -15,7 +15,7 @@ import ContactForm from "./contactUsform";
 export function HeroButton() {
   
   return (
-    <div className="py-10   flex items-center justify-center">
+    <div className="py-10  z-50 flex items-center justify-center">
       <Modal>
         <ModalTrigger className="bg-[#C8A26B] dark:bg-[#C8A26B] dark:text-white font-bold text-xl text-white flex justify-center group/modal-btn">
           <span className="group-hover/modal-btn:translate-x-40 text-center transition duration-500">

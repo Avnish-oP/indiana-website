@@ -1,3 +1,4 @@
+import { Gilda_Display } from "next/font/google";
 import type { Config } from "tailwindcss";
 const defaultTheme = require("tailwindcss/defaultTheme");
 const colors = require("tailwindcss/colors");
@@ -30,6 +31,10 @@ const config: Config = {
           800: '#927F1B',
           900: '#746514',
         },
+      },
+      fontFamily: {
+        Gilda_Display: [ "Gilda Display", ...defaultTheme.fontFamily.serif ],
+        
       },
     },
   },
