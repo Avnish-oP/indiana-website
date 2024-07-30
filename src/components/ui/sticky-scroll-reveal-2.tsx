@@ -39,7 +39,7 @@ export const ScrollableCategories = ({
   };
 
   return (
-    <div className="w-full flex flex-col items-center p-4 relative gilda-display-regular">
+    <div className="w-full flex flex-col items-center p-4 relative">
       <h1 className="md:text-4xl text-2xl text-center font-bold text-[#b68034] mb-10 my-4 antialiased">Categories Available</h1>
       <div className="relative w-full mb-6 overflow-hidden">
         <div className="flex overflow-x-auto no-scrollbar items-center">

@@ -107,7 +107,7 @@ const Founders = () => {
   ];
 
   return (
-    <section className="bg-white py-20 text-[#C8A26B] gilda-display-regular overflow-hidden">
+    <section className="bg-white py-20 text-[#C8A26B]  overflow-hidden">
       <div className="container mx-auto px-4 text-center">
         <motion.h2
           className="text-4xl font-bold mb-4"

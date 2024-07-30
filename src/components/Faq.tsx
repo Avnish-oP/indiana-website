@@ -26,7 +26,7 @@ const FAQAccordion = () => {
   ];
 
   return (
-    <div className="md:flex flex-col justify-center max-w-[85rem] bg-white items-center gap-6 md:mx-auto py-8 mt-4 mx-4 gilda-display-regular ">
+    <div className="md:flex flex-col justify-center max-w-[85rem] bg-white items-center gap-6 md:mx-auto py-8 mt-4 mx-4 ">
       <h2 className="lg:text-6xl md:text-4xl text-2xl font-semibold mb-6 text-[#c99245] antialiased">Frequently Asked Questions</h2>
       <div className="bg-white  rounded-lg overflow-hidden w-full">
         {faqs.map((faq, index) => (

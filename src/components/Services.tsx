@@ -46,7 +46,7 @@ const ServiceCard = ({ icon, title, description }: { icon: JSX.Element, title: s
 const Services = () => (
   <section className="py-16 bg-gradient-to-r from-white bellefair-regular">
     <div className="container mx-auto px-4">
-      <h2 className="text-4xl text-[#C8A26B] antialiased font-bold text-center mb-8 gilda-display-regular">
+      <h2 className="text-4xl text-[#C8A26B] antialiased font-bold text-center mb-8 ">
         Our Services
       </h2>
       <p className="text-center mb-12 text-lg bellefair-regular italic">
