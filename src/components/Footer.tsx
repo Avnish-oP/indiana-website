@@ -10,13 +10,13 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-8 md:mb-0 md:w-1/3 text-center md:text-left">
             <Image className="" src="/logo.svg" width={150} height={100} alt="Indiana Merchandise" />
-            <h2 className="text-3xl font-bold mb-4">Indiana Merchandise</h2>
+            <h2 className="text-3xl  mb-4">Indiana Merchandise</h2>
             <p className="text-lg">
               Providing the best quality products with exceptional service.
             </p>
           </div>
           <div className="mb-8 md:mb-0 md:w-1/3 text-center">
-            <h3 className="text-2xl font-bold mb-4 ">Contact Us</h3>
+            <h3 className="text-2xl  mb-4 ">Contact Us</h3>
             <p>
               <strong>Email:</strong> info@indianabuyinghouse.com
             </p>
@@ -28,7 +28,7 @@ const Footer = () => {
             </p>
           </div>
           <div className="md:w-1/3 text-center md:text-right">
-            <h3 className="text-2xl font-bold mb-4 ">Follow Us</h3>
+            <h3 className="text-2xl  mb-4 ">Follow Us</h3>
             <div className="flex justify-center md:justify-end space-x-4">
               <Link href="https://facebook.com" className="text-white hover:text-gray-200 transition-colors duration-300">
                 <FaFacebookF size={24} />

@@ -1,4 +1,4 @@
-import { Gilda_Display } from "next/font/google";
+import { Barlow, Gilda_Display } from "next/font/google";
 import type { Config } from "tailwindcss";
 const defaultTheme = require("tailwindcss/defaultTheme");
 const colors = require("tailwindcss/colors");
@@ -34,6 +34,8 @@ const config: Config = {
       },
       fontFamily: {
         Gilda_Display: [ "Gilda Display", ...defaultTheme.fontFamily.serif ],
+        Barlow: [ "Barlow", ...defaultTheme.fontFamily.sans ],
+      
         
       },
     },

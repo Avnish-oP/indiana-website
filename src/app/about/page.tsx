@@ -19,7 +19,7 @@ const About = () => {
           <h1 className="text-5xl font-normal">Indiana Merchandising</h1>
         </div>
         <div className="bg-white shadow-lg rounded-3xl p-10 max-w-2xl mx-auto mb-10">
-          <h2 className="text-3xl font-bold mb-4">Founder&apos;s Note</h2>
+          <h2 className="text-3xl  mb-4">Founder&apos;s Note</h2>
           <p className="text-gray-700 text-lg">
             Welcome to Indiana Merchandise, where we are dedicated to
             delivering unparalleled quality and craftsmanship. Our commitment to
@@ -30,7 +30,7 @@ const About = () => {
           </p>
         </div>
         <div className="max-w-2xl mx-auto mb-16">
-          <h2 className="text-3xl font-bold mb-6 antialiased">Company&apos;s Vision</h2>
+          <h2 className="text-3xl  mb-6 antialiased">Company&apos;s Vision</h2>
           <p className="text-gray-700 italic text-lg">
           &quot;Indiana Merchandise is a leading provider of high-quality products
             sourced from trusted suppliers worldwide. Our services include
@@ -50,7 +50,7 @@ const About = () => {
               height={200}
               className="rounded-full mt-[0.6rem] object-cover shadow-lg transition-transform duration-300 hover:scale-105"
             />
-            <h3 className="text-2xl mt-6 font-bold mb-2">Depanshu Tyagi</h3>
+            <h3 className="text-2xl mt-6  mb-2">Depanshu Tyagi</h3>
             <div className="flex space-x-4 text-2xl text-[#C8A26B]">
               <a
                 href="https://linkedin.com"

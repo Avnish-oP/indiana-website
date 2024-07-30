@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Gilda+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -24,6 +25,23 @@
   .heroBackground {
     background-image: url('/path-to-your-background-image.jpg');
   }
+  .inter-font{
+    font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  
+  font-variation-settings:
+    "slnt" 0;
+  }
+  .inter-font-italic{
+    font-family: "Inter", sans-serif;
+    font-style: italic;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-variation-settings:
+    "slnt" 0;
+  }
+
   
   .textEnter {
     opacity: 0;
@@ -53,6 +71,13 @@
 .no-scrollbar {
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
+}
+@media (min-width: 768px) {
+  .md\\:-space-x-reverse > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-x-reverse: 20;
+    margin-right: calc(1rem * var(--tw-space-x-reverse));
+    margin-left: calc(-1rem * calc(1 - var(--tw-space-x-reverse)));
+  }
 }
 
 

@@ -1,5 +1,5 @@
 "use client";
-import React, { useRef, useEffect, useState } from "react";
+import React, { useRef, useEffect } from "react";
 import { motion, useAnimation } from "framer-motion";
 import Image from "next/image";
 
@@ -78,45 +78,50 @@ const ServiceCard = ({ service, index }: { service: any, index: number }) => {
   };
 
   return (
-    <div ref={ref} className="flex md:flex-row items-center md:mx-20  md:space-y-0 md:-space-x-16 -space-x-8 mb-10 overflow-hidden">
-      <motion.div
-        className="flex-1 p-4 md:p-5 lg:p-10 bg-white  shadow-lg rounded-2xl relative z-10"
-        initial="hidden"
-        animate={controls}
-        variants={cardVariants}
-        transition={{ duration: 0.5, delay: index * 0.2 }}
-      >
-        <div dangerouslySetInnerHTML={{ __html: service.svg }} />
-        <h2 className="text-xl md:text-2xl lg:text-3xl font-bold text-gray-800  my-4">
-          {service.title}
-        </h2>
-        <p className="text-gray-600 dark:text-gray-400 my-2">{service.description}</p>
-      </motion.div>
-      <motion.div
-        className="flex-1  md:block overflow-hidden rounded-2xl relative"
-        initial="hidden"
-        animate={controls}
-        variants={imageWrapperVariants}
-        transition={{ duration: 0.5, delay: index * 0.2 + 0.5 }}
-        style={{ transformOrigin: "left" }}
-      >
-        <Image
-          src={service.image}
-          alt={service.title}
-          width={400}
-          height={200}
-          className="object-cover object-center w-full h-64 md:h-80 lg:h-76"
-        />
-      </motion.div>
-    </div>
+    <div
+  ref={ref}
+  className={`flex md:flex-row items-center md:mx-20 md:space-y-0 mb-10 overflow-hidden ${
+    index % 2 !== 0 ? "md:flex-row-reverse md:-space-x-reverse " : "md:-space-x-16"
+  } -space-x-8`}
+>
+  <motion.div
+    className="flex-1 p-4 md:p-5 lg:p-10 bg-white shadow-lg rounded-2xl relative z-20"
+    initial="hidden"
+    animate={controls}
+    variants={cardVariants}
+    transition={{ duration: 0.5, delay: index * 0.2 }}
+  >
+    <div dangerouslySetInnerHTML={{ __html: service.svg }} />
+    <h2 className="text-xl md:text-2xl lg:text-3xl text-gray-800 my-4">
+      {service.title}
+    </h2>
+    <p className="text-gray-600 dark:text-gray-400 my-2">{service.description}</p>
+  </motion.div>
+  <motion.div
+    className={`flex-1 md:block overflow-hidden rounded-2xl relative ${index===1?"left-16":" "} z-10`}
+    initial="hidden"
+    animate={controls}
+    variants={imageWrapperVariants}
+    transition={{ duration: 0.5, delay: index * 0.2 + 0.5 }}
+    style={{ transformOrigin: "left" }}
+  >
+    <Image
+      src={service.image}
+      alt={service.title}
+      width={400}
+      height={200}
+      className="object-cover object-center w-full h-64 md:h-80 lg:h-76"
+    />
+  </motion.div>
+</div>
   );
 };
 
 export default function ServiceSection() {
   return (
-    <section className="py-16 bg-gray-100 ">
-      <div className="container mx-auto px-4">
-        <h1 className="text-4xl font-bold text-center text-[#C8A26B] antialiased mb-12">
+    <section className="py-16 bg-[#222]">
+      <div className="container mx-auto px-4 border-[0.01rem] border-white p-10 rounded-3xl">
+        <h1 className="text-4xl text-center text-white antialiased mb-12">
           Why Choose Us?
         </h1>
         <div className="space-y-10">

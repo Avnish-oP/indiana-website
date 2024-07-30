@@ -17,7 +17,7 @@ const AnimatedNumber = ({ value }: { value: number }) => {
   });
 
   return (
-    <animated.span className="text-4xl font-bold text-[#C8A26B]">
+    <animated.span className="text-4xl  text-[#C8A26B]">
       {props.number.to(n => Math.floor(n).toLocaleString())}
     </animated.span>
   );

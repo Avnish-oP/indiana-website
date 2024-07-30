@@ -4,6 +4,8 @@ import { motion, AnimatePresence } from "framer-motion";
 import styles from "../styles/Hero.module.css";
 import { HeroButton } from "./HeroButton";
 import { FiPhone } from "react-icons/fi";
+import { FaPhone, FaPhoneAlt } from "react-icons/fa";
+import { FaPhoneFlip } from "react-icons/fa6";
 
 const Hero = () => {
   const [index, setIndex] = useState(0);
@@ -16,9 +18,14 @@ const Hero = () => {
   }, []);
 
   const texts = [
-    "Welcome to Indiana  Merchandise",
-    "Where Exquisite Craftsmanship  Meets Unparalleled Quality",
-    "Luxury Meets Imagination : The Essence of Elegance with INDIANA MERCHANDISING",
+    "Elevating Standards  in Global Sourcing",
+    "Redefining Excellence  in Procurement",
+    "Where Exquisite  Craftsmanship meets unparalleled Quality",
+  ];
+  const subtexts = [
+    "Unveiling a seamless journey from world-class suppliers to exceptional product delivery, crafted to perfection.",
+    "Partnering with premium suppliers to ensure impeccable quality and bespoke solutions tailored to your needs",
+    "Where exceptional craftsmanship meets unmatched quality, delivering products that embody precision and sophistication from the heart of India"
   ];
 
   const handleClick = (newIndex: number) => {
@@ -94,7 +101,7 @@ const Hero = () => {
       className={`relative z-0 h-screen bg-cover bg-center ${styles.heroBackground} overflow-hidden`}
     >
       <div className="absolute inset-0 bg-black opacity-50"></div>
-      <div className="relative z-10 flex flex-col items-center justify-center h-full text-white text-center px-4">
+      <div className="relative z-10 mt-6 flex flex-col items-center justify-center h-full text-white text-center px-4">
         <div>
           <AnimatePresence initial={false} custom={direction}>
             <motion.div
@@ -106,11 +113,14 @@ const Hero = () => {
               exit="exit"
               className="flex flex-col items-center"
             >
-              <h1 className={`text-3xl md:text-5xl lg:text-6xl font-normal`}>
+              <h1 className={`text-lg tracking-wider md:text-lg mb-4 iner-font lg:text-lg font-normal`}>
+                "Welcome to Indiana Merchandising"
+              </h1>
+              <h1 className={`text-3xl tracking-wider md:text-4xl lg:text-5xl font-normal`}>
                 {texts[index].split(" ").map((word, i) =>
-                  i === 2 ? (
+                  i === 1 ? (
                     <span key={i} className="relative inline-block">
-                      {word}
+                      {word.toUpperCase()}
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 200 20"
@@ -126,7 +136,7 @@ const Hero = () => {
                       </svg>
                     </span>
                   ) : (
-                    word + " "
+                    word.toUpperCase() + " "
                   )
                 )}
               </h1>
@@ -136,7 +146,8 @@ const Hero = () => {
                 animate="center"
                 exit="exit"
               >
-                <HeroButton />
+                <p className="text-md  mt-10 font-Barlow tracking-wider font-light iner-font">{subtexts[index]}</p>
+                
               </motion.div>
             </motion.div>
           </AnimatePresence>
@@ -148,22 +159,28 @@ const Hero = () => {
               initial="enter"
               animate="center"
               exit="exit"
-              className="flex flex-col md:flex-row gap-4 items-center justify-center mt-4"
+              className="flex flex-col md:flex-row gap-3 items-center justify-center mt-4"
             >
+              <HeroButton />
+              <div className="bg-white ml-4 p-4 rounded-full">
+              <FaPhoneAlt color="#C8A26B" className="w-5 h-5" />
+              </div>
               <motion.div
-                className="flex items-center space-x-3 bg-transparent border-2 border-[#C8A26B] text-[#C8A26B] px-4 py-2 rounded-full transition-colors hover:bg-[#C8A26B] hover:text-white"
-                whileHover={{ backgroundColor: "#C8A26B", color: "#FFFFFF" }}
+                className="flex flex-col items-start  cursor-pointer  transition-colors text-white  hover:text-white"
+                
+                transition={{ duration: 0.3, ease: "easeInOut" }}
               >
-                <FiPhone className="w-5 h-5" />
-              </motion.div>
+                
+              Need Help?
               <motion.span
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 1.2, ease: "easeInOut" }}
-                className="font-semibold hover:text-[#C8A26B] antialiased text-2xl transition-colors duration-300"
+                transition={{ duration: 0.3, ease: "easeInOut" }}
+                className="text-white  antialiased text-2xl transition-colors duration-300"
               >
-                +91-23456-7890
+                (+91)-23456-7890
               </motion.span>
+              </motion.div>
             </motion.div>
           </AnimatePresence>
         </div>

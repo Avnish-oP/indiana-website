@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import { StickyScroll } from "./ui/sticky-scroll-reveal";
-import { ScrollableCategories } from "./ui/sticky-scroll-reveal-2";
+import  ScrollableCategories  from "./ui/sticky-scroll-reveal-2";
 
 const categories = [
     {

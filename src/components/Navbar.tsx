@@ -68,7 +68,7 @@ const Navbar = () => {
               <Link
                 key={item}
                 href={`/${item.toLowerCase()}`}
-                className="relative group text-[#C8A26B] hover:text-[#ffce8a] px-3 py-0 rounded-md text-lg font-medium transition-colors duration-300 cursor-pointer antialiased bellefair-regular"
+                className="relative group text-[#C8A26B] hover:text-black px-3 py-0 rounded-md text-lg font-medium transition-colors duration-300 cursor-pointer antialiased bellefair-regular"
               >
                 {item}
                 <span
