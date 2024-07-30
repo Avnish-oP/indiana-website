@@ -114,7 +114,7 @@ const Hero = () => {
               className="flex flex-col items-center"
             >
               <h1 className={`text-lg tracking-wider md:text-lg mb-4 iner-font lg:text-lg font-normal`}>
-                "Welcome to Indiana Merchandising"
+                Welcome to Indiana Merchandising
               </h1>
               <h1 className={`text-3xl tracking-wider md:text-4xl lg:text-5xl font-normal`}>
                 {texts[index].split(" ").map((word, i) =>
