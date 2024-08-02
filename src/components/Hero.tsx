@@ -113,7 +113,7 @@ const Hero = () => {
               exit="exit"
               className="flex flex-col items-center"
             >
-              {index===0&&<h1 className={`text-sm tracking-wider md:text-lg mb-4 inter-font lg:text-sm font-normal`}>
+              {index===0&&<h1 className={`text-sm tracking-wider md:text-sm mb-4 inter-font lg:text-sm font-normal`}>
                 Welcome to Indiana Merchandising
               </h1>}
               <h1 className={`text-2xl tracking-wider md:text-4xl lg:text-5xl font-normal`}>
