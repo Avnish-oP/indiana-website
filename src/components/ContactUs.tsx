@@ -19,7 +19,7 @@ const ContactUs = () => {
             </div>
             <div>
               <p className="text-lg text-gray-700 dark:text-gray-500 font-semibold">Contact Number</p>
-              <p className="text-xl text-gray-800 dark:text-[#C8A26B] ">+91 9998883332</p>
+              <p className="text-xl text-gray-800 dark:text-[#C8A26B] ">+91-9998883332</p>
             </div>
           </div>
         </div>
