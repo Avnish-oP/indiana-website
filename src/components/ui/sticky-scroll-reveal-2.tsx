@@ -8,15 +8,15 @@ const ScrollableCategories = ({ categories }: { categories: any[] }) => {
   const categoryRefs = useRef<(HTMLDivElement | null)[]>([]);
 
   // Scroll to the active category
-  useEffect(() => {
-    if (categoryRefs.current[activeCategory]) {
-      categoryRefs.current[activeCategory].scrollIntoView({
-        behavior: "smooth",
-        block: "nearest",
-        inline: "center",
-      });
-    }
-  }, [activeCategory]);
+  // useEffect(() => {
+  //   if (categoryRefs.current[activeCategory]) {
+  //     categoryRefs.current[activeCategory].scrollIntoView({
+  //       behavior: "smooth",
+  //       block: "nearest",
+  //       inline: "center",
+  //     });
+  //   }
+  // }, [activeCategory]);
 
   const handleCategoryClick = (index: React.SetStateAction<number>) => {
     setActiveCategory(index);

@@ -14,10 +14,11 @@ import ContactForm from "./contactUsform";
 import { FaPhone, FaPhoneAlt } from "react-icons/fa";
 import { FaPhoneFlip, FaPhoneSlash, FaSquarePhone } from "react-icons/fa6";
 import { FiPhone } from "react-icons/fi";
+import Link from "next/link";
 
 export function HeroButton() {
   return (
-    <div className="py-10  z-50 flex items-center justify-center">
+    <Link href={"/contacts"} className="py-10  z-50 flex items-center justify-center">
       <Modal>
         <ModalTrigger className="border-2 hover:bg-[#C8A26B] items-center gap-2 p-5 px-6 border-[#C8A26B] rounded-full dark:bg- dark:text-white  text-xl text-white flex justify-center group/modal-btn ">
           <span className="group-hover/modal-btn:translate-y-40 text-xl text-center inter-font transition duration-500 ">
@@ -44,7 +45,7 @@ export function HeroButton() {
           </span>
           </div>
         </ModalTrigger>
-        <ModalBody>
+        {/* <ModalBody>
           <ModalContent>
             <h4 className="text-lg md:text-2xl text-neutral-600 dark:text-neutral-100  text-center mb-8">
               Contact Us{" "}
@@ -57,8 +58,8 @@ export function HeroButton() {
               <ContactForm />
             </div>
           </ModalContent>
-        </ModalBody>
+        </ModalBody> */}
       </Modal>
-    </div>
+    </Link>
   );
 }
