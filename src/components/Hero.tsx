@@ -113,7 +113,7 @@ const Hero = () => {
               exit="exit"
               className="flex flex-col items-center"
             >
-              {index===0&&<h1 className={`text-sm tracking-wider md:text-lg mb-4 inter-font lg:text-xl font-normal`}>
+              {index===0&&<h1 className={`text-sm tracking-wider md:text-lg mb-4 inter-font lg:text-sm font-normal`}>
                 Welcome to Indiana Merchandising
               </h1>}
               <h1 className={`text-2xl tracking-wider md:text-4xl lg:text-5xl font-normal`}>
@@ -181,7 +181,7 @@ const Hero = () => {
                 transition={{ duration: 0.3, ease: "easeInOut" }}
                 className="text-white  antialiased text-lg lg:text-2xl transition-colors duration-300"
               >
-                (+91)-8851432710
+                (+91)8851432710
               </motion.span>
               </motion.div>
               </div>
