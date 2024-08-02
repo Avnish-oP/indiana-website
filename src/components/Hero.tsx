@@ -38,7 +38,7 @@ const Hero = () => {
       x: direction > 0 ? "100vw" : "-100vw",
       opacity: 0,
       height: 0,
-      transition: { duration: 0.5, ease: "easeInOut" },
+      transition: { duration: 1, ease: "easeInOut" },
     }),
     center: {
       x: 0,
@@ -80,7 +80,7 @@ const Hero = () => {
       x: direction > 0 ? "100vw" : "-100vw",
       opacity: 0,
       height: 0,
-      transition: { duration: 0.5, ease: "easeInOut" },
+      transition: { duration: 1, ease: "easeInOut" },
     }),
     center: {
       x: 0,
@@ -113,10 +113,10 @@ const Hero = () => {
               exit="exit"
               className="flex flex-col items-center"
             >
-              <h1 className={`text-lg tracking-wider md:text-lg mb-4 iner-font lg:text-lg font-normal`}>
+              {index===0&&<h1 className={`text-sm tracking-wider md:text-lg mb-4 inter-font lg:text-xl font-normal`}>
                 Welcome to Indiana Merchandising
-              </h1>
-              <h1 className={`text-3xl tracking-wider md:text-4xl lg:text-5xl font-normal`}>
+              </h1>}
+              <h1 className={`text-2xl tracking-wider md:text-4xl lg:text-5xl font-normal`}>
                 {texts[index].split(" ").map((word, i) =>
                   i === 1 ? (
                     <span key={i} className="relative inline-block">
@@ -146,7 +146,7 @@ const Hero = () => {
                 animate="center"
                 exit="exit"
               >
-                <p className="text-md  mt-10 font-Barlow tracking-wider font-light iner-font">{subtexts[index]}</p>
+                <p className="text-sm mt-4 lg:mt-10 font-Barlow tracking-wider font-light iner-font">{subtexts[index]}</p>
                 
               </motion.div>
             </motion.div>
@@ -162,7 +162,9 @@ const Hero = () => {
               className="flex flex-col md:flex-row gap-3 items-center justify-center mt-4"
             >
               <HeroButton />
-              <div className="bg-white ml-4 p-4 rounded-full">
+              
+              <div className="flex gap-4">
+                <div className="bg-white ml-4 p-4 rounded-full">
               <FaPhoneAlt color="#C8A26B" className="w-5 h-5" />
               </div>
               <motion.div
@@ -171,16 +173,19 @@ const Hero = () => {
                 transition={{ duration: 0.3, ease: "easeInOut" }}
               >
                 
-              Need Help?
+                
+             <h1> Need Help?</h1>
               <motion.span
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.3, ease: "easeInOut" }}
-                className="text-white  antialiased text-2xl transition-colors duration-300"
+                className="text-white  antialiased text-lg lg:text-2xl transition-colors duration-300"
               >
-                (+91)-23456-7890
+                (+91)-8851432710
               </motion.span>
               </motion.div>
+              </div>
+              
             </motion.div>
           </AnimatePresence>
         </div>
@@ -189,7 +194,7 @@ const Hero = () => {
             <motion.button
               key={i}
               className={`px-3 py-1 rounded-full text-lg md:text-xl font-normal transition-colors duration-300 ${
-                i === index ? "text-2xl bg-[#C8A26B] text-white scale-150" : "bg-gray-100  bg-opacity-60 text-gray-800"
+                i === index ? "text-2xl  text-white scale-150" : "  bg-opacity-60 text-gray-300"
               }`}
               onClick={() => handleClick(i)}
               initial={{ opacity: 0.9, scale: 0.9 }}

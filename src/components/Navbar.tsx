@@ -58,8 +58,9 @@ const Navbar = () => {
                   className="brightness-125"
                 />
               </motion.div>
-              <span className="text-4xl antialiased bellefair-regular font-extralight">
-                INDIANA
+              <span className="flex flex-col -ml-2 -space-y-2 font-Gilda_Display  antialiased font-light">
+                <p className="text-[#C8A26B] text-center text-3xl">INDIANA</p>
+                <p className="text-[#C8A26B] text-center text-[0.6rem]">MERCHANDISING</p>
               </span>
             </Link>
           </div>
@@ -67,7 +68,7 @@ const Navbar = () => {
             {["Home", "About", "Contacts", "Categories"].map((item) => (
               <Link
                 key={item}
-                href={`/${item.toLowerCase()}`}
+                href={`/${item === "Home" ? "/" : item.toLowerCase()}`}
                 className="relative group text-[#C8A26B] hover:text-black px-3 py-0 rounded-md text-lg font-medium transition-colors duration-300 cursor-pointer antialiased bellefair-regular"
               >
                 {item}

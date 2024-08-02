@@ -80,8 +80,8 @@ const ServiceCard = ({ service, index }: { service: any, index: number }) => {
   return (
     <div
   ref={ref}
-  className={`flex md:flex-row items-center md:mx-20 md:space-y-0 mb-10 overflow-hidden ${
-    index % 2 !== 0 ? "md:flex-row-reverse md:-space-x-reverse " : "md:-space-x-16"
+  className={`flex flex-row items-center md:mx-20 md:space-y-0 mb-10 overflow-hidden ${
+    index % 2 !== 0 ? "flex-row-reverse -space-x-reverse -ml-8" : "md:-space-x-16"
   } -space-x-8`}
 >
   <motion.div
