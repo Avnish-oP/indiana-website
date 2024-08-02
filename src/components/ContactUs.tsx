@@ -18,7 +18,7 @@ const ContactUs = () => {
               <Image src="/images/hero.jpg" width={400} height={400} alt="Contact Us" className="rounded-lg shadow-lg" />
             </div>
             <div>
-              <p className="text-lg text-gray-700 dark:text-gray-500 font-semibold">Contact Number</p>
+              <p className="text-lg text-gray-700 dark:text-gray-500 font-semi">Contact Number</p>
               <p className="text-xl text-gray-800 dark:text-[#C8A26B] ">+91-9998883332</p>
             </div>
           </div>
@@ -29,7 +29,7 @@ const ContactUs = () => {
             <Image src="/images/hero.jpg" width={400} height={400} alt="Contact Us" className="rounded-lg shadow-lg" />
           </div>
           <div>
-            <p className="text-lg text-gray-700 dark:text-gray-300 font-semibold">Contact Number</p>
+            <p className="text-lg text-gray-700 dark:text-gray-300 font-semi">Contact Number</p>
             <p className="text-xl text-gray-800 dark:text-[#C8A26B] ">+91 9998883332</p>
           </div>
         </div>

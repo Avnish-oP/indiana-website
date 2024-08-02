@@ -29,7 +29,7 @@ const ScrollableCategories = ({ categories }: { categories: any[] }) => {
 
   return (
     <div className="w-full flex flex-col items-center p-4 relative">
-      <h1 className="md:text-4xl text-2xl text-center font-bold text-[#b68034] mb-10 my-4 antialiased">Categories Available</h1>
+      <h1 className="md:text-4xl text-2xl text-center font- text-[#b68034] mb-10 my-4 antialiased">Categories Available</h1>
       <div className="relative w-full mb-6 overflow-hidden">
         <div className="flex overflow-x-auto no-scrollbar items-center">
           {categories.map((category, index) => (
@@ -37,7 +37,7 @@ const ScrollableCategories = ({ categories }: { categories: any[] }) => {
               key={index}
               onClick={() => handleCategoryClick(index)}
               className={`cursor-pointer text-center md:text-xl text-lg flex items-center mx-4 transition-transform duration-300 ${
-                activeCategory === index ? "text-[#C8A26B] font-bold scale-110" : "text-gray-600 opacity-50 scale-90"
+                activeCategory === index ? "text-[#C8A26B] font- scale-110" : "text-gray-600 opacity-50 scale-90"
               }`}
               ref={(el) => {
                 categoryRefs.current[index] = el;
@@ -76,7 +76,7 @@ const ScrollableCategories = ({ categories }: { categories: any[] }) => {
             key={String(index)}
             onClick={() => handleProductClick(Number(index))}
             className={`cursor-pointer flex justify-center lg:ml-44 items-center mx-4 p-2 min-w-[200px] transition-transform duration-300 ${
-              activeProduct === index ? "text-[#C8A26B] font-bold scale-110" : "text-gray-600 opacity-50 scale-90"
+              activeProduct === index ? "text-[#C8A26B] font- scale-110" : "text-gray-600 opacity-50 scale-90"
             }`}
           >
             <svg width="10" height="10" xmlns="http://www.w3.org/2000/svg" className="transform rotate-90 mr-4">
@@ -112,7 +112,7 @@ const ScrollableCategories = ({ categories }: { categories: any[] }) => {
           className="mt-6 text-center"
         >
           {categories[activeCategory].products[activeProduct].content}
-          <h2 className="text-xl font-bold">{categories[activeCategory].products[activeProduct].title}</h2>
+          <h2 className="text-xl font-">{categories[activeCategory].products[activeProduct].title}</h2>
           <p className="text-gray-600 mt-2">{categories[activeCategory].products[activeProduct].description}</p>
         </motion.div>
       </AnimatePresence>

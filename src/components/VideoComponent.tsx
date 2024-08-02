@@ -29,7 +29,7 @@ const VideoComponent = () => {
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="text-4xl font-bold mb-8 text-[#C8A26B]"
+          className="text-4xl font- mb-8 text-[#C8A26B]"
         >
           Watch Our Story
         </motion.h2>
@@ -53,7 +53,7 @@ const VideoComponent = () => {
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.5 }}
-              className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white px-6 py-3 rounded-full text-lg font-semibold transition-colors duration-300 group-hover:bg-opacity-75"
+              className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white px-6 py-3 rounded-full text-lg font-semi transition-colors duration-300 group-hover:bg-opacity-75"
               style={{ mixBlendMode: 'screen' }}
             >
               <svg

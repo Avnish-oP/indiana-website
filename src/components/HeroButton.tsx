@@ -25,6 +25,7 @@ export function HeroButton() {
             CONTACT US
           </span>
           <svg
+          className="group-hover/modal-btn:translate-y-40 text-xl text-center inter-font transition duration-500 "
             xmlns="http://www.w3.org/2000/svg"
             width="20"
             height="20"
@@ -40,9 +41,24 @@ export function HeroButton() {
             
           </svg>
           <div className="-translate-y-40 group-hover/modal-btn:translate-y-0 flex items-center justify-center absolute inset-0 transition duration-500 text-white text-base z-20 text-center ">
-          <span className=" text-xl text-center transition inter-font duration-500 mr-6 ">
+          <span className=" text-xl text-center transition inter-font duration-500 mr-2 ">
             CONTACT US
           </span>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M22 2L11 13"></path>
+            <path d="M22 2L15 22L11 13L2 9L22 2Z"></path>
+            
+          </svg>
           </div>
         </ModalTrigger>
         {/* <ModalBody>
