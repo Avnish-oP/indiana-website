@@ -33,68 +33,71 @@ const Hero = () => {
     setIndex(newIndex);
   };
 
-  const textVariants = {
-    enter: (direction: number) => ({
-      x: direction > 0 ? "100vw" : "-100vw",
-      opacity: 0,
-      height: 0,
-      transition: { duration: 1, ease: "easeInOut" },
-    }),
-    center: {
-      x: 0,
-      opacity: 1,
-      height: "auto",
-      transition: { duration: 0.8, ease: "easeInOut" },
-    },
-    exit: (direction: number) => ({
-      x: direction > 0 ? "-100vw" : "100vw",
-      opacity: 0,
-      height: 0,
-      transition: { duration: 0.5, ease: "easeInOut" },
-    }),
-  };
+  const commonTransition = { duration: 1, ease: "easeInOut" };
+const exitTransition = { duration: 0.8, ease: "easeInOut" };
 
-  const buttonVariants = {
-    enter: {
-      opacity: 0,
-      scale: 0.9,
-      y: 50,
-      transition: { duration: 0.3, ease: "easeInOut" },
-    },
-    center: {
-      opacity: 1,
-      scale: 1,
-      y: 0,
-      transition: { duration: 0.6, ease: "easeInOut" },
-    },
-    exit: {
-      opacity: 0,
-      scale: 0.9,
-      y: -50,
-      transition: { duration: 0.3, ease: "easeInOut" },
-    },
-  };
+const textVariants = {
+  enter: (direction: number) => ({
+    x: direction > 0 ? "100vw" : "-100vw",
+    opacity: 0,
+    height: 0,
+    transition: commonTransition,
+  }),
+  center: {
+    x: 0,
+    opacity: 1,
+    height: "auto",
+    transition: commonTransition,
+  },
+  exit: (direction: number) => ({
+    x: direction > 0 ? "-100vw" : "100vw",
+    opacity: 0,
+    height: 0,
+    transition: exitTransition,
+  }),
+};
 
-  const phoneVariants = {
-    enter: (direction: number) => ({
-      x: direction > 0 ? "100vw" : "-100vw",
-      opacity: 0,
-      height: 0,
-      transition: { duration: 1, ease: "easeInOut" },
-    }),
-    center: {
-      x: 0,
-      opacity: 1,
-      height: "auto",
-      transition: { duration: 0.8, ease: "easeInOut" },
-    },
-    exit: (direction: number) => ({
-      x: direction > 0 ? "-100vw" : "100vw",
-      opacity: 0,
-      height: 0,
-      transition: { duration: 0.5, ease: "easeInOut" },
-    }),
-  };
+const buttonVariants = {
+  enter: {
+    opacity: 0,
+    scale: 0.9,
+    y: 50,
+    transition: commonTransition,
+  },
+  center: {
+    opacity: 1,
+    scale: 1,
+    y: 0,
+    transition: commonTransition,
+  },
+  exit: {
+    opacity: 0,
+    scale: 0.9,
+    y: -50,
+    transition: exitTransition,
+  },
+};
+
+const phoneVariants = {
+  enter: (direction: number) => ({
+    x: direction > 0 ? "100vw" : "-100vw",
+    opacity: 0,
+    height: 0,
+    transition: commonTransition,
+  }),
+  center: {
+    x: 0,
+    opacity: 1,
+    height: "auto",
+    transition: commonTransition,
+  },
+  exit: (direction: number) => ({
+    x: direction > 0 ? "-100vw" : "100vw",
+    opacity: 0,
+    height: 0,
+    transition: exitTransition,
+  }),
+};
 
   return (
     <section
@@ -113,7 +116,7 @@ const Hero = () => {
               exit="exit"
               className="flex flex-col items-center"
             >
-              {index===0&&<h1 className={`text-sm tracking-wider md:text-lg mb-4 inter-font lg:text-xl font-normal`}>
+              {index===0&&<h1 className={`text-sm tracking-wider md:text-sm mb-4 inter-font lg:text-sm font-normal`}>
                 Welcome to Indiana Merchandising
               </h1>}
               <h1 className={`text-2xl tracking-wider md:text-4xl lg:text-5xl font-normal`}>
@@ -181,7 +184,7 @@ const Hero = () => {
                 transition={{ duration: 0.3, ease: "easeInOut" }}
                 className="text-white  antialiased text-lg lg:text-2xl transition-colors duration-300"
               >
-                (+91)-8851432710
+                (+91)8851432710
               </motion.span>
               </motion.div>
               </div>
