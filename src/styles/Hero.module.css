@@ -39,6 +39,6 @@
     content: '';
     position: absolute;
     inset: 0;
-    background: rgba(0, 0, 0, 0.5); /* Dark filter */
+    background: rgba(0, 0, 0, 0.55); /* Dark filter */
   }
   

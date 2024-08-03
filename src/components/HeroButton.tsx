@@ -20,19 +20,19 @@ export function HeroButton() {
   return (
     <Link href={"/contacts"} className="py-10  z-50 flex items-center justify-center">
       <Modal>
-        <ModalTrigger className="border-2 hover:bg-[#C8A26B] items-center gap-2 p-5 px-6 border-[#C8A26B] rounded-full dark:bg- dark:text-white  text-xl text-white flex justify-center group/modal-btn ">
-          <span className="group-hover/modal-btn:translate-y-40 text-xl text-center inter-font transition duration-500 ">
+        <ModalTrigger className="border-2 hover:bg-[#C8A26B] items-center gap-2 p-5 px-8 border-[#C8A26B] rounded-full dark:bg- dark:text-white  text-xl text-white flex justify-center group/modal-btn ">
+          <span className="group-hover/modal-btn:translate-y-40 text-sm tracking-wider text-center inter-font transition duration-500 ">
             CONTACT US
           </span>
           <svg
           className="group-hover/modal-btn:translate-y-40 text-xl text-center inter-font transition duration-500 "
             xmlns="http://www.w3.org/2000/svg"
-            width="20"
-            height="20"
+            width="16"
+            height="16"
             viewBox="0 0 24 24"
             fill="none"
             stroke="currentColor"
-            stroke-width="2"
+            stroke-width="1"
             stroke-linecap="round"
             stroke-linejoin="round"
           >
@@ -41,17 +41,17 @@ export function HeroButton() {
             
           </svg>
           <div className="-translate-y-40 group-hover/modal-btn:translate-y-0 flex items-center justify-center absolute inset-0 transition duration-500 text-white text-base z-20 text-center ">
-          <span className=" text-xl text-center transition inter-font duration-500 mr-2 ">
+          <span className=" text-sm text-center transition inter-font duration-500 mr-2 ">
             CONTACT US
           </span>
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            width="20"
-            height="20"
+            width="16"
+            height="16"
             viewBox="0 0 24 24"
             fill="none"
             stroke="currentColor"
-            stroke-width="2"
+            stroke-width="1"
             stroke-linecap="round"
             stroke-linejoin="round"
           >

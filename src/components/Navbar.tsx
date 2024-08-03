@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import logo from "../../public/logo.svg";
+import logo from "../../public/logo2.svg";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -38,30 +38,39 @@ const Navbar = () => {
   return (
     <nav
       className={`fixed w-full text-[#C8A26B] z-20 transition-all duration-300  ${
-        scroll ? "bg-gradient-to-r from-white via-gray-100 to-white shadow-md" : "bg-transparent"
+        scroll
+          ? "bg-gradient-to-r from-white via-gray-100 to-white bg-[#F8F5F0] shadow-md"
+          : "bg-transparent"
       } ${showNav ? "top-0" : "-top-16"}`}
     >
-      <div className="mx-auto px-2 sm:px-6 lg:px-20">
-        <div className="flex items-center justify-between h-16">
+      <div className="mx-auto py-1 px-2 sm:px-6 lg:px-20">
+        <div className="flex items-center justify-between h-12">
           <div className="flex items-center space-x-0">
             <Link href="/" className="flex items-center">
               <motion.div
                 initial={{ scale: 1 }}
                 animate={{ scale: scroll ? 1.25 : 1.35 }}
                 transition={{ duration: 0.3 }}
+                className="flex items-center -space-x-2"
               >
                 <Image
                   src={logo}
                   alt="Logo"
+                  width={75}
+                  height={100}
+                  className=""
+                />
+              
+              
+                <Image
+                  src={"/title.svg"}
+            
+                  alt="Logo"
                   width={100}
                   height={100}
-                  className="brightness-125"
+                  className="hidden md:block mt-1"
                 />
               </motion.div>
-              <span className="flex flex-col -ml-2 -space-y-2 font-Gilda_Display  antialiased font-light">
-                <p className="text-[#C8A26B] text-center text-3xl">INDIANA</p>
-                <p className="text-[#C8A26B] text-center text-[0.6rem]">MERCHANDISING</p>
-              </span>
             </Link>
           </div>
           <div className="hidden md:flex md:items-center md:space-x-6 z-30">
@@ -72,9 +81,7 @@ const Navbar = () => {
                 className="relative group text-[#C8A26B] hover:text-black px-3 py-0 rounded-md text-lg font-medium transition-colors duration-300 cursor-pointer antialiased bellefair-regular"
               >
                 {item}
-                <span
-                  className="absolute left-0 bottom-[-4px] w-full h-[2px] bg-[#C8A26B] scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"
-                ></span>
+                <span className="absolute left-0 bottom-[-4px] w-full h-[2px] bg-[#C8A26B] scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
               </Link>
             ))}
           </div>
@@ -142,9 +149,7 @@ const Navbar = () => {
               className="relative block text-[#C8A26B]  hover:text-[#ffce8a] px-3 py-2 rounded-md text-base font-medium transition-colors duration-300"
             >
               {item}
-              <span
-                  className="absolute left-0 bottom-[-4px] w-full h-[2px] bg-[#C8A26B] scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"
-                ></span>
+              <span className="absolute left-0 bottom-[-4px] w-full h-[2px] bg-[#C8A26B] scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
             </Link>
           ))}
         </div>
