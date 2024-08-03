@@ -54,12 +54,12 @@ const ServiceCard = ({ icon, title, description }: { icon: JSX.Element, title: s
 );
 
 const Services = () => (
-  <section className="py-16 bg-gradient-to-r from-white bellefair-regular">
-    <div className="container mx-auto px-4">
+  <section className="py-16 bg-[#222222] bellefair-regular">
+    <div className="container mx-auto  border-white  rounded-3xl">
       <h2 className="text-4xl text-[#C8A26B] antialiased  text-center mb-8 ">
         Our Services
       </h2>
-      <p className="text-center mb-12 inter-font-italic text-lg font-medium  italic">
+      <p className="text-center text-white mb-12 inter-font-italic text-lg font-medium  italic">
       &quot; Indiana Merchandising, a Buying House which offers a wide range of services to meet all your needs.&quot;
       </p>
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-8">

@@ -56,7 +56,7 @@ const FounderCard = ({ founder }: { founder: FounderType }) => {
           />
         </motion.div>
         <motion.h3
-          className="text-3xl relative left-8 text-nowrap bg-clip-text -rotate-90 opacity-75 from-[#C8A26B] to-white font-bold antialiased"
+          className="text-3xl relative left-8 text-nowrap bg-clip-text -rotate-90 opacity-75 from-[#C8A26B] to-white font- antialiased"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : 20, rotate: -90 }}
           transition={{ duration: 0.6, delay: 0.6 }}
@@ -72,7 +72,7 @@ const FounderCard = ({ founder }: { founder: FounderType }) => {
           <FaLinkedin className="w-6 md:w-8 h-6 md:h-8 text-[#C8A26B] hover:text-[#0e76a8] transition-colors duration-300 " />
         </Link>
         <motion.h3
-          className="text-2xl md:text-3xl bg-clip-text text-center text-nowrap text-transparent group-hover:text-[#C8A26B]  bg-gradient-to-b from-[#C8A26B] to-gray-200  font-bold antialiased z-10"
+          className="text-2xl md:text-3xl bg-clip-text text-center text-nowrap text-transparent group-hover:text-[#C8A26B]  bg-gradient-to-b from-[#C8A26B] to-gray-200  font- antialiased z-10"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : 20 }}
           transition={{ duration: 0.6, delay: 0.9 }}
@@ -110,7 +110,7 @@ const Founders = () => {
     <section className="bg-white py-20 text-[#C8A26B]  overflow-hidden">
       <div className="container mx-auto px-4 text-center">
         <motion.h2
-          className="text-4xl font-bold mb-4"
+          className="text-4xl font- mb-4"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}

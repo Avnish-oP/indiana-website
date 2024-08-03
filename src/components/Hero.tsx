@@ -25,7 +25,7 @@ const Hero = () => {
   const subtexts = [
     "Unveiling a seamless journey from world-class suppliers to exceptional product delivery, crafted to perfection.",
     "Partnering with premium suppliers to ensure impeccable quality and bespoke solutions tailored to your needs",
-    "Where exceptional craftsmanship meets unmatched quality, delivering products that embody precision and sophistication from the heart of India"
+    "Where exceptional craftsmanship meets unmatched quality, delivering products that embody precision and sophistication from the heart of India",
   ];
 
   const handleClick = (newIndex: number) => {
@@ -33,71 +33,74 @@ const Hero = () => {
     setIndex(newIndex);
   };
 
-  const commonTransition = { duration: 1, ease: "easeInOut" };
-const exitTransition = { duration: 0.8, ease: "easeInOut" };
+  const commonTransition = { duration: 1.2, ease: "easeInOut" };
+  const exitTransition = { duration: 1, ease: "easeInOut" };
 
-const textVariants = {
-  enter: (direction: number) => ({
-    x: direction > 0 ? "100vw" : "-100vw",
-    opacity: 0,
-    height: 0,
-    transition: commonTransition,
-  }),
-  center: {
-    x: 0,
-    opacity: 1,
-    height: "auto",
-    transition: commonTransition,
-  },
-  exit: (direction: number) => ({
-    x: direction > 0 ? "-100vw" : "100vw",
-    opacity: 0,
-    height: 0,
-    transition: exitTransition,
-  }),
-};
+  const textVariants = {
+    enter: (direction: number) => ({
+      x: direction > 0 ? "100vw" : "-100vw",
+      opacity: 0,
+      height: 0,
+      transition: commonTransition,
+    }),
+    center: {
+      x: 0,
+      opacity: 1,
+      height: "auto",
+      transition: commonTransition,
+    },
+    exit: (direction: number) => ({
+      x: direction > 0 ? "-100vw" : "100vw",
+      opacity: 0,
+      height: 0,
+      transition: exitTransition,
+    }),
+  };
 
-const buttonVariants = {
-  enter: {
-    opacity: 0,
-    scale: 0.9,
-    y: 50,
-    transition: commonTransition,
-  },
-  center: {
-    opacity: 1,
-    scale: 1,
-    y: 0,
-    transition: commonTransition,
-  },
-  exit: {
-    opacity: 0,
-    scale: 0.9,
-    y: -50,
-    transition: exitTransition,
-  },
-};
+  const buttonVariants = {
+    enter: {
+      opacity: 0,
+      scale: 1,
+      y: 50,
+      transition: commonTransition,
+    },
+    center: {
+      opacity: 1,
+      scale: 0.9,
+      y: 0,
+      transition: commonTransition,
+    },
+    exit: {
+      opacity: 0,
+      scale: 0.9,
+      y: -50,
+      transition: exitTransition,
+    },
+  };
 
-const phoneVariants = {
-  enter: (direction: number) => ({
-    x: direction > 0 ? "100vw" : "-100vw",
-    opacity: 0,
-    height: 0,
-    transition: commonTransition,
-  }),
-  center: {
-    x: 0,
-    opacity: 1,
-    height: "auto",
-    transition: commonTransition,
-  },
-  exit: (direction: number) => ({
-    x: direction > 0 ? "-100vw" : "100vw",
-    opacity: 0,
-    height: 0,
-    transition: exitTransition,
-  }),
-};
+  const phoneVariants = {
+    enter: (direction: number) => ({
+      x: direction > 0 ? "100vw" : "-100vw",
+      opacity: 0,
+      height: 0,
+      // scale: 0.9,
+      transition: commonTransition,
+    }),
+    center: {
+      x: 0,
+      opacity: 1,
+      height: "auto",
+      // scale: 1,
+      transition: commonTransition,
+    },
+    exit: (direction: number) => ({
+      x: direction > 0 ? "-100vw" : "100vw",
+      opacity: 0,
+      height: 0,
+      // scale: 0.9,
+      transition: exitTransition,
+    }),
+  };
 
   return (
     <section
@@ -116,10 +119,15 @@ const phoneVariants = {
               exit="exit"
               className="flex flex-col items-center"
             >
-              {index===0&&<h1 className={`text-sm tracking-wider md:text-sm mb-4 inter-font lg:text-sm font-normal`}>
-                Welcome to Indiana Merchandising
-              </h1>}
-              <h1 className={`text-2xl tracking-wider md:text-4xl lg:text-5xl font-normal`}>
+              <h1
+                className={`text-[1rem] tracking-wider md:text-sm mb-4 inter-font lg:text-sm font-normal`}
+              >
+                {index === 0 && "Welcome to Indiana Merchandising"}
+              </h1>
+              <h1
+                className={`text-2xl tracking-widest lg:tracking-[1rem] md:text-4xl lg:text-6xl leading-loose  font-normal`}
+                style={{ lineHeight: "1.5" }}
+              >
                 {texts[index].split(" ").map((word, i) =>
                   i === 1 ? (
                     <span key={i} className="relative inline-block">
@@ -127,7 +135,7 @@ const phoneVariants = {
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 200 20"
-                        className="absolute left-0 -bottom-3 w-full h-5 text-[#C8A26B]"
+                        className="absolute left-0 -bottom-2 w-full h-5 text-[#C8A26B]"
                         preserveAspectRatio="none"
                       >
                         <path
@@ -149,8 +157,9 @@ const phoneVariants = {
                 animate="center"
                 exit="exit"
               >
-                <p className="text-sm mt-4 lg:mt-10 font-Barlow tracking-wider font-light iner-font">{subtexts[index]}</p>
-                
+                <p className="text-[1rem] mt-0 lg:mt-4 font-Barlow tracking-wider font-light iner-font">
+                  {subtexts[index]}
+                </p>
               </motion.div>
             </motion.div>
           </AnimatePresence>
@@ -162,33 +171,29 @@ const phoneVariants = {
               initial="enter"
               animate="center"
               exit="exit"
-              className="flex flex-col md:flex-row gap-3 items-center justify-center mt-4"
+              className="flex flex-col md:flex-row gap-3 items-center justify-center mt"
             >
               <HeroButton />
-              
+
               <div className="flex gap-4">
                 <div className="bg-white ml-4 p-4 rounded-full">
-              <FaPhoneAlt color="#C8A26B" className="w-5 h-5" />
+                  <FaPhoneAlt color="#C8A26B" className="w-5 h-5" />
+                </div>
+                <motion.div
+                  className="flex flex-col items-start  cursor-pointer  transition-colors text-white  hover:text-white"
+                  transition={{ duration: 0.3, ease: "easeInOut" }}
+                >
+                  <h1 className="inter-font"> Need Help?</h1>
+                  <motion.span
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.3, ease: "easeInOut" }}
+                    className="text-white  antialiased text-lg lg:text-2xl transition-colors duration-300"
+                  >
+                    (+91) 8851432710
+                  </motion.span>
+                </motion.div>
               </div>
-              <motion.div
-                className="flex flex-col items-start  cursor-pointer  transition-colors text-white  hover:text-white"
-                
-                transition={{ duration: 0.3, ease: "easeInOut" }}
-              >
-                
-                
-             <h1> Need Help?</h1>
-              <motion.span
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.3, ease: "easeInOut" }}
-                className="text-white  antialiased text-lg lg:text-2xl transition-colors duration-300"
-              >
-                (+91)8851432710
-              </motion.span>
-              </motion.div>
-              </div>
-              
             </motion.div>
           </AnimatePresence>
         </div>
@@ -197,7 +202,9 @@ const phoneVariants = {
             <motion.button
               key={i}
               className={`px-3 py-1 rounded-full text-lg md:text-xl font-normal transition-colors duration-300 ${
-                i === index ? "text-2xl  text-white scale-150" : "  bg-opacity-60 text-gray-300"
+                i === index
+                  ? "text-2xl  text-white scale-150"
+                  : "  bg-opacity-60 text-gray-300"
               }`}
               onClick={() => handleClick(i)}
               initial={{ opacity: 0.9, scale: 0.9 }}
@@ -208,7 +215,6 @@ const phoneVariants = {
             </motion.button>
           ))}
         </div>
-        
       </div>
     </section>
   );

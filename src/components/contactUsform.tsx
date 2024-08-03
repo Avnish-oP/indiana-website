@@ -94,7 +94,7 @@ const ContactForm = () => {
         ></textarea>
       </div>
       <div>
-        <button className="w-full p-3 bg-[#C8A26B] text-white font-semibold rounded-3xl hover:bg-[#b8945e] transition duration-300">
+        <button className="w-full p-3 bg-[#C8A26B] text-white font-semi rounded-3xl hover:bg-[#b8945e] transition duration-300">
           Send Message
         </button>
       </div>
