@@ -3,7 +3,7 @@ import React from "react";
 import { StickyScroll } from "./ui/sticky-scroll-reveal";
 import  ScrollableCategories  from "./ui/sticky-scroll-reveal-2";
 
-const categories = [
+export const categories = [
     {
       title: "Decor",
       description: "Enhance your space with our range of decorative items.",
