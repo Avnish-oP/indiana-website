@@ -4,7 +4,7 @@ import { categories } from "./Categories"; // Adjust the import as needed
 
 function Categories2() {
   const [activeCategory, setActiveCategory] = useState(0);
-  const [activeProduct, setActiveProduct] = useState(0);
+  const [activeProduct, setActiveProduct] = useState(1);
   const containerRef = useRef<HTMLDivElement>(null);
 
   const setCategory = (index: number) => {
@@ -49,7 +49,6 @@ function Categories2() {
       containerRef.current.scrollTo({
         left: scrollPosition,
         behavior: "smooth",
-        
       });
     }
   }, [activeCategory]);
@@ -80,70 +79,68 @@ function Categories2() {
             &lt;
           </button>
 
-          <div
-            
-            className="relative w-full flex justify-start items-end overflow-x-auto no-scrollbar snap-x snap-mandatory"
-          >
+          <div className="relative w-full flex justify-start items-end overflow-x-auto no-scrollbar snap-x snap-mandatory">
             <div className="pl-4"></div> {/* Add padding at the start */}
             <div
-            ref={containerRef}
-            className="w-full flex justify-start items-end overflow-x-auto no-scrollbar snap-x snap-mandatory"
+              ref={containerRef}
+              className="w-full flex justify-start items-end overflow-x-auto no-scrollbar snap-x snap-mandatory"
             >
-            {categories.map((category, index) => (
-              <div
-                key={index}
-                className={`flex flex-col justify-center items-center transition-transform duration-300 ${
-                  activeCategory === index ? "scale-110" : "scale-100"
-                }`}
-              >
+              {categories.map((category, index) => (
                 <div
-                  onClick={() => setCategory(index)}
-                  className={`cursor-pointer snap-center font-bold text-center ${
-                    activeCategory === index
-                      ? " text-3xl lg:text-[3.4rem] text-gray-200"
-                      : "text-5xl lg:text-[3rem] opacity-50 text-gray-400"
-                  } transition-all duration-500`}
+                  key={index}
+                  className={`flex flex-col justify-center items-center transition-transform duration-300 ${
+                    activeCategory === index ? "scale-110" : "scale-100"
+                  }`}
                 >
-                  {category.title}
-                </div>
-                <div className="transition-all duration-1000">
-                  <svg
-                    className={`h-8 ${
-                      activeCategory === index ? "scale-100" : "scale-100"
-                    }`}
-                    viewBox={`0 0 ${category.title.length * 16} 16`}
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
+                  <div
+                    onClick={() => setCategory(index)}
+                    className={`cursor-pointer snap-center font-bold text-center ${
+                      activeCategory === index
+                        ? " text-3xl lg:text-[3.4rem] text-gray-200"
+                        : "text-5xl lg:text-[3rem] opacity-50 text-gray-400"
+                    } transition-all duration-500`}
                   >
-                    {[...Array(Math.floor(category.title.length * 4))].map(
-                      (_, i) => (
-                        <path
-                          key={i}
-                          d={`M${i * 4} ${
-                            i === Math.floor(category.title.length * 2)
-                              ? "0"
-                              : Math.random() < 0.3
-                              ? "4"
-                              : "8"
-                          } V20`}
-                          stroke={
-                            i === Math.floor(category.title.length * 2)
-                              ? "#C8A26B"
-                              : "#ccc"
-                          }
-                          strokeWidth={
-                            activeCategory === index &&
-                            i === Math.floor(category.title.length * 2)
-                              ? "1"
-                              : "0.2"
-                          }
-                        />
-                      )
-                    )}
-                  </svg>
+                    {category.title}
+                  </div>
+                  <div className="transition-all duration-1000">
+                    <svg
+                      className={`h-8 ${
+                        activeCategory === index ? "scale-100" : "scale-100"
+                      }`}
+                      viewBox={`0 0 ${category.title.length * 16} 16`}
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      {[...Array(Math.floor(category.title.length * 4))].map(
+                        (_, i) => (
+                          <path
+                            key={i}
+                            d={`M${i * 4} ${
+                              i === Math.floor(category.title.length * 2)
+                                ? "0"
+                                : Math.random() < 0.3
+                                ? "4"
+                                : "8"
+                            } V20`}
+                            stroke={
+                              i === Math.floor(category.title.length * 2)
+                                ? "#C8A26B"
+                                : "#ccc"
+                            }
+                            strokeWidth={
+                              activeCategory === index &&
+                              i === Math.floor(category.title.length * 2)
+                                ? "1"
+                                : "0.2"
+                            }
+                          />
+                        )
+                      )}
+                    </svg>
+                  </div>
                 </div>
-              </div>
-            ))}</div>
+              ))}
+            </div>
             <div className="pr-4"></div> {/* Add padding at the end */}
           </div>
 
@@ -160,36 +157,111 @@ function Categories2() {
         <div className="flex justify-center items-center w-full px-8">
           <button
             onClick={prevProduct}
-            className="bg-white text-gray-800 p-2 rounded-full"
+            className="bg-transparent border border-white text-white p-2 rounded-full hover:bg-white hover:text-gray-800 transition-all duration-300"
           >
-            &lt;
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              className="w-6 h-6"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M15 19l-7-7 7-7"
+              />
+            </svg>
           </button>
-          <div className="mt-8 w-full flex justify-between items-start px-4">
-            {categories[activeCategory].products.map((product, index) => (
+          <div className="mt-8 w-full flex justify-between items-start px-4 relative">
+            {/* mobile view */}
+            <div className="flex sm:hidden justify-center w-full relative overflow-hidden">
               <div
-                key={index}
-                className={`w-1/4 cursor-pointer z-30 flex flex-col justify-center items-center ${
-                  activeProduct === index ? "opacity-100 " : "opacity-50"
-                }`}
-                onClick={() => setActiveProduct(index)}
+                className="flex transition-transform duration-500 ease-in-out"
+                style={{
+                  transform: `translateX(${-(activeProduct - 1) * 33.33}%)`,
+                  width: `${
+                    categories[activeCategory].products.length * 33.33
+                  }%`,
+                }}
               >
-                <div className="text-2xl text-white">{product.content}</div>
-                {index === activeProduct && (
-                  <div>
-                    <div className="mt-2 text-gray-300">{product.title}</div>
-                    <div className="mt-4 text-gray-300">
-                      {product.description}
-                    </div>
+                {categories[activeCategory].products.map((product, index) => (
+                  <div
+                    key={index}
+                    className={`w-1/3 flex-shrink-0 cursor-pointer flex flex-col justify-center items-center ${
+                      activeProduct === index ? "opacity-100 " : "opacity-50"
+                    }`}
+                    onClick={() => setActiveProduct(index)}
+                  >
+                    <div className="text-2xl text-white">{product.content}</div>
+                    {index === activeProduct && (
+                      <div className="text-center">
+                        <div className="mt-2 text-gray-300">
+                          {product.title}
+                        </div>
+                        <div className="mt-4 text-gray-300">
+                          {product.description}
+                        </div>
+                      </div>
+                    )}
                   </div>
-                )}
+                ))}
               </div>
-            ))}
+            </div>
+            {/* desktop view */}
+            <div className="flex justify-center w-full relative overflow-hidden">
+              <div
+                className="flex transition-transform duration-500 ease-in-out"
+                style={{
+                  transform: `translateX(${-(activeProduct - 1) * 33.33}%)`,
+                  width: `${
+                    categories[activeCategory].products.length * 33.33
+                  }%`,
+                }}
+              >
+                {categories[activeCategory].products.map((product, index) => (
+                  <div
+                    key={index}
+                    className={`w-1/3 flex-shrink-0 cursor-pointer flex flex-col justify-center items-center ${
+                      activeProduct === index ? "opacity-100 " : "opacity-50"
+                    }`}
+                    onClick={() => setActiveProduct(index)}
+                  >
+                    <div className="text-2xl text-white">{product.content}</div>
+                    {index === activeProduct && (
+                      <div className="text-center">
+                        <div className="mt-2 text-gray-300">
+                          {product.title}
+                        </div>
+                        <div className="mt-4 text-gray-300">
+                          {product.description}
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
           <button
             onClick={nextProduct}
-            className="bg-white text-gray-800 p-2 rounded-full"
+            className="bg-transparent border border-white text-white p-2 rounded-full hover:bg-white hover:text-gray-800 transition-all duration-300"
           >
-            &gt;
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              className="w-6 h-6"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M9 5l7 7-7 7"
+              />
+            </svg>
           </button>
         </div>
       </div>
