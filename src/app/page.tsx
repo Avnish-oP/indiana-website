@@ -8,6 +8,7 @@ import Services from "@/components/Services";
 import StatsBar from "@/components/Stats";
 import Head from "next/head";
 import VideoComponent from "@/components/VideoComponent";
+import Categories2 from "@/components/Categories2";
 
 
 
@@ -24,7 +25,8 @@ export default function Home() {
       </Head>
     <main className="min-h-screen">
       <Hero />
-      <Categories />
+      {/* <Categories /> */}
+      <Categories2 />
       <StatsBar />
       <Services />
       <Founders />

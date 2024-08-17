@@ -3,10 +3,11 @@ import React from "react";
 import { StickyScroll } from "./ui/sticky-scroll-reveal";
 import  ScrollableCategories  from "./ui/sticky-scroll-reveal-2";
 
-const categories = [
+export const categories = [
     {
       title: "Decor",
       description: "Enhance your space with our range of decorative items.",
+      image: "/images/Hero.jpg",
       products: [
         {
           title: "Vases",
@@ -46,6 +47,7 @@ const categories = [
     {
       title: "Living",
       description: "Furniture and accessories for a comfortable living space.",
+      image: "/images/beautiful.jpeg",
       products: [
         {
           title: "Sofas",
@@ -85,6 +87,7 @@ const categories = [
     {
       title: "Home Office",
       description: "Everything you need for an efficient and stylish home office.",
+      image: "/images/temple.jpg",
       products: [
         {
           title: "Desks",
@@ -124,6 +127,7 @@ const categories = [
     {
       title: "Garden and Outdoor",
       description: "Products to enhance your garden and outdoor spaces.",
+      image : "/images/beautiful.jpeg",
       products: [
         {
           title: "Patio Furniture",
@@ -163,6 +167,7 @@ const categories = [
     {
       title: "Bar",
       description: "Everything you need for a well-stocked bar.",
+      image:"/images/Hero.jpg",
       products: [
         {
           title: "Bar Stools",
@@ -202,6 +207,7 @@ const categories = [
     {
       title: "Mats",
       description: "Protective and decorative mats for various spaces.",
+      image: "/images/temple.jpg",
       products: [
         {
           title: "Entrance Mats",
@@ -241,6 +247,7 @@ const categories = [
     {
       title: "Wall Decor",
       description: "Add character to your walls with our decor options.",
+      image: "/images/beautiful.jpeg",
       products: [
         {
           title: "Wall Stickers",
@@ -280,6 +287,7 @@ const categories = [
     {
       title: "Kitchen & Dining",
       description: "Essential items for a functional and stylish kitchen and dining area.",
+      image: "/images/Hero.jpg",
       products: [
         {
           title: "Cookware",
@@ -319,6 +327,7 @@ const categories = [
     {
       title: "Bathroom Essentials",
       description: "Everything you need for a well-equipped bathroom.",
+      image: "/images/temple.jpg",
       products: [
         {
           title: "Towels",
@@ -358,6 +367,7 @@ const categories = [
     {
       title: "Seasonal",
       description: "Products for various seasons and holidays.",
+      image: "/images/beautiful.jpeg",
       products: [
         {
           title: "Holiday Decorations",
