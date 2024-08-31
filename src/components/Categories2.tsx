@@ -38,13 +38,10 @@ function Categories2() {
 
   useEffect(() => {
     if (containerRef.current) {
-      const activeElement = containerRef.current.children[
-        activeCategory
-      ] as HTMLElement;
+      const activeElement = containerRef.current.children[activeCategory] as HTMLElement;
       const screenWidth = window.innerWidth;
       const activeElementWidth = activeElement.offsetWidth;
-      const scrollPosition =
-        activeElement.offsetLeft - screenWidth / 2 + activeElementWidth / 2;
+      const scrollPosition = activeElement.offsetLeft - screenWidth / 2 + activeElementWidth / 2;
 
       containerRef.current.scrollTo({
         left: scrollPosition,
@@ -55,7 +52,7 @@ function Categories2() {
 
   return (
     <div
-      className="w-full h-screen flex flex-col items-center justify-center relative"
+      className="w-full  py-10  flex flex-col items-center justify-center relative"
       style={{
         backgroundImage: `url(${categories[activeCategory].image})`,
         backgroundSize: "cover",
@@ -74,7 +71,7 @@ function Categories2() {
           {/* Left Button (Previous) */}
           <button
             onClick={prevCategory}
-            className="absolute z-10  bg-white text-gray-800 py-6 px-3 mb-10 rounded-sm bg-opacity-10 hover:bg-opacity-75  transition-all duration-300"
+            className="absolute z-10 bg-white text-gray-800 py-6 px-3 mb-10 rounded-sm bg-opacity-10 hover:bg-opacity-75 transition-all duration-300"
           >
             &lt;
           </button>
@@ -88,7 +85,7 @@ function Categories2() {
               {categories.map((category, index) => (
                 <div
                   key={index}
-                  className={`flex flex-col justify-center items-center transition-transform duration-300 ${
+                  className={`flex flex-col justify-center items-center transition-transform duration-500 ${
                     activeCategory === index ? "scale-110" : "scale-100"
                   }`}
                 >
@@ -154,7 +151,7 @@ function Categories2() {
         </div>
 
         {/* Product Display */}
-        <div className="flex justify-center items-center w-full px-8">
+        <div className="flex mt-16 lg:mt-10 justify-center items-center w-full px-8">
           <button
             onClick={prevProduct}
             className="bg-transparent border border-white text-white p-2 rounded-full hover:bg-white hover:text-gray-800 transition-all duration-300"
@@ -177,42 +174,30 @@ function Categories2() {
           <div className="mt-8 w-full flex justify-between items-start px-4 relative">
             {/* mobile view */}
             <div className="flex sm:hidden justify-center w-full relative overflow-hidden">
-              <div
-                className="flex transition-transform duration-500 ease-in-out"
-                style={{
-                  transform: `translateX(${-(activeProduct - 1) * 33.33}%)`,
-                  width: `${
-                    categories[activeCategory].products.length * 33.33
-                  }%`,
-                }}
-              >
-                {categories[activeCategory].products.map((product, index) => (
-                  <div
-                    key={index}
-                    className={`w-1/3 flex-shrink-0 cursor-pointer flex flex-col justify-center items-center ${
-                      activeProduct === index ? "opacity-100 " : "opacity-50"
-                    }`}
-                    onClick={() => setActiveProduct(index)}
-                  >
-                    <div className="text-2xl text-white">{product.content}</div>
-                    {index === activeProduct && (
-                      <div className="text-center">
-                        <div className="mt-2 text-gray-300">
-                          {product.title}
-                        </div>
-                        <div className="mt-4 text-gray-300">
-                          {product.description}
-                        </div>
+              {categories[activeCategory].products.map((product, index) => (
+                <div
+                  key={index}
+                  className={`w-full flex-shrink-0 cursor-pointer flex flex-col justify-center items-center ${
+                    activeProduct === index ? "block" : "hidden"
+                  }`}
+                  onClick={() => setActiveProduct(index)}
+                >
+                  <div className="text-2xl text-white">{product.content}</div>
+                  {index === activeProduct && (
+                    <div className="text-center">
+                      <div className="mt-2 text-gray-300">{product.title}</div>
+                      <div className="mt-4 text-gray-300">
+                        {product.description}
                       </div>
-                    )}
-                  </div>
-                ))}
-              </div>
+                    </div>
+                  )}
+                </div>
+              ))}
             </div>
             {/* desktop view */}
-            <div className="flex justify-center w-full relative overflow-hidden">
+            <div className="hidden sm:flex justify-center w-full relative overflow-hidden">
               <div
-                className="flex transition-transform duration-500 ease-in-out"
+                className="flex transition-transform duration-1000 ease-in-out"
                 style={{
                   transform: `translateX(${-(activeProduct - 1) * 33.33}%)`,
                   width: `${
