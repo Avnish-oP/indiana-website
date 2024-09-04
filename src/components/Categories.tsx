@@ -7,7 +7,7 @@ export const categories = [
     {
       title: "Decor",
       description: "Enhance your space with our range of decorative items.",
-      image: "/images/Hero.jpg",
+      image: "/images/Decor.jpg",
       products: [
         {
           title: "Vases",
@@ -45,9 +45,9 @@ export const categories = [
       ],
     },
     {
-      title: "Living",
+      title: "Planters",
       description: "Furniture and accessories for a comfortable living space.",
-      image: "/images/beautiful.jpeg",
+      image: "/images/Planters.jpg",
       products: [
         {
           title: "Sofas",
@@ -85,9 +85,9 @@ export const categories = [
       ],
     },
     {
-      title: "Home Office",
+      title: "Lightning",
       description: "Everything you need for an efficient and stylish home office.",
-      image: "/images/temple.jpg",
+      image: "/images/Lamps.jpg",
       products: [
         {
           title: "Desks",
@@ -125,18 +125,18 @@ export const categories = [
       ],
     },
     {
-      title: "Garden and Outdoor",
+      title: "Furniture",
       description: "Products to enhance your garden and outdoor spaces.",
-      image : "/images/beautiful.jpeg",
+      image : "/images/Furniture.jpg",
       products: [
         {
           title: "Patio Furniture",
           description: "Durable and stylish patio furniture.",
           content: (
             <img 
-              src="https://via.placeholder.com/300x300?text=Patio+Furniture" 
+              src="https://via.placeholder.com/300x200?text=Patio+Furniture" 
               alt="Patio Furniture" 
-              className="h-full w-full object-cover"
+              className="h-full w-full object-cover rounded-lg"
             />
           ),
         },
@@ -145,9 +145,9 @@ export const categories = [
           description: "Essential tools for garden maintenance.",
           content: (
             <img 
-              src="https://via.placeholder.com/300x300?text=Garden+Tools" 
+              src="https://via.placeholder.com/300x200?text=Garden+Tools" 
               alt="Garden Tools" 
-              className="h-full w-full object-cover"
+              className="h-full w-full object-cover rounded-lg"
             />
           ),
         },
@@ -156,18 +156,18 @@ export const categories = [
           description: "Illuminate your outdoor space with stylish lighting.",
           content: (
             <img 
-              src="https://via.placeholder.com/300x300?text=Outdoor+Lighting" 
+              src="https://via.placeholder.com/300x200?text=Outdoor+Lighting" 
               alt="Outdoor Lighting" 
-              className="h-full w-full object-cover"
+              className="h-full w-full object-cover rounded-lg"
             />
           ),
         },
       ],
     },
     {
-      title: "Bar",
+      title: "Kitchen and Dining",
       description: "Everything you need for a well-stocked bar.",
-      image:"/images/Hero.jpg",
+      image:"/images/kitchen.jpg",
       products: [
         {
           title: "Bar Stools",
@@ -205,9 +205,9 @@ export const categories = [
       ],
     },
     {
-      title: "Mats",
+      title: "Barware",
       description: "Protective and decorative mats for various spaces.",
-      image: "/images/temple.jpg",
+      image: "/images/Bar.jpg",
       products: [
         {
           title: "Entrance Mats",
@@ -245,9 +245,9 @@ export const categories = [
       ],
     },
     {
-      title: "Wall Decor",
+      title: "Bathroom Essentials",
       description: "Add character to your walls with our decor options.",
-      image: "/images/beautiful.jpeg",
+      image: "/images/Bathroom.jpg",
       products: [
         {
           title: "Wall Stickers",
@@ -285,9 +285,9 @@ export const categories = [
       ],
     },
     {
-      title: "Kitchen & Dining",
+      title: "Mats",
       description: "Essential items for a functional and stylish kitchen and dining area.",
-      image: "/images/Hero.jpg",
+      image: "/images/mats.jpg",
       products: [
         {
           title: "Cookware",
@@ -325,9 +325,9 @@ export const categories = [
       ],
     },
     {
-      title: "Bathroom Essentials",
+      title: "Office Stationery",
       description: "Everything you need for a well-equipped bathroom.",
-      image: "/images/temple.jpg",
+      image: "/images/office.jpg",
       products: [
         {
           title: "Towels",
@@ -367,7 +367,7 @@ export const categories = [
     {
       title: "Seasonal",
       description: "Products for various seasons and holidays.",
-      image: "/images/beautiful.jpeg",
+      image: "/images/seasonal.jpg",
       products: [
         {
           title: "Holiday Decorations",

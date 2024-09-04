@@ -44,23 +44,29 @@ function Categories2() {
       const scrollPosition = activeElement.offsetLeft - (containerWidth / 2 - activeElementWidth / 2);
 
       containerRef.current.style.transform = `translateX(${-scrollPosition}px)`;
-      containerRef.current.style.transition = "transform 0.9s ease-in-out";
+      containerRef.current.style.transition = "transform 1s ease-in-out";
     }
   }, [activeCategory]);
 
   return (
     <div
-      className="w-full py-10 flex flex-col items-center justify-center relative"
+      className="w-full h-screen flex flex-col items-center justify-center relative "
       style={{
         backgroundImage: `url(${categories[activeCategory].image})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
-        transition: "background-image 0.5s ease-in-out",
         backgroundRepeat: "no-repeat",
+        transition: " background-size 0.9s ease-out",
+        backgroundBlendMode: "overlay",
+        overflow: "hidden",
+
+        
       }}
     >
+      
+
       {/* Overlay */}
-      <div className="absolute inset-0 bg-black opacity-50"></div>
+      <div className="absolute inset-0 bg-black opacity-60"></div>
 
       {/* Content */}
       <div className="relative z-10 w-full h-full flex flex-col items-center justify-center">
@@ -78,55 +84,55 @@ function Categories2() {
             <div className="pl-4"></div> {/* Add padding at the start */}
             <div
               ref={containerRef}
-              className="w-full flex justify-start items-end"
+              className="w-full flex justify-center items-start mt-20 snap-x snap-mandatory"
             >
               {categories.map((category, index) => (
                 <div
                   key={index}
-                  className={`flex flex-col justify-center items-center transition-transform duration-500 ${
-                    activeCategory === index ? "scale-110" : "scale-100"
+                  className={`flex flex-col justify-center items-center transition-transform duration-1000 ${
+                    activeCategory === index ? "scale-100" : "scale-100"
                   }`}
                 >
                   <div
                     onClick={() => setCategory(index)}
-                    className={`cursor-pointer snap-center font-bold text-center ${
+                    className={`cursor-pointer   text-center ${
                       activeCategory === index
-                        ? " text-3xl lg:text-[3.4rem] text-gray-200"
-                        : "text-5xl lg:text-[3rem] opacity-50 text-gray-400"
-                    } transition-all duration-1000`}
+                        ? " text-3xl -mt-4 lg:text-[4.5rem] text-gray-200"
+                        : "text-5xl -mt-2 lg:text-[2rem] opacity-50 text-gray-400"
+                    } transition-all duration-1000 text-nowrap`}
                   >
                     {category.title}
                   </div>
                   <div className="transition-all duration-1000">
                     <svg
-                      className={`h-8 ${
-                        activeCategory === index ? "scale-100" : "scale-100"
+                      className={`h-8 mt-4 ${
+                        activeCategory === index ? "scale-100 " : "scale-100"
                       }`}
-                      viewBox={`0 0 ${category.title.length * 16} 16`}
+                      viewBox={`0 0 ${category.title.length * 28} 24`}
                       fill="none"
                       xmlns="http://www.w3.org/2000/svg"
                     >
-                      {[...Array(Math.floor(category.title.length * 4))].map(
+                      {[...Array(Math.floor(category.title.length * 7))].map(
                         (_, i) => (
                           <path
                             key={i}
                             d={`M${i * 4} ${
-                              i === Math.floor(category.title.length * 2)
+                              i === Math.floor(category.title.length * 3.5)
                                 ? "0"
                                 : Math.random() < 0.3
-                                ? "4"
-                                : "8"
+                                ? "5"
+                                : "10"
                             } V20`}
                             stroke={
-                              i === Math.floor(category.title.length * 2)
-                                ? "#C8A26B"
+                              i === Math.floor(category.title.length * 3.5)
+                                ? "#ffff"
                                 : "#ccc"
                             }
                             strokeWidth={
                               activeCategory === index &&
-                              i === Math.floor(category.title.length * 2)
+                              i === Math.floor(category.title.length * 3.5)
                                 ? "1"
-                                : "0.2"
+                                : "0.3"
                             }
                           />
                         )
@@ -206,18 +212,18 @@ function Categories2() {
                 {categories[activeCategory].products.map((product, index) => (
                   <div
                     key={index}
-                    className={`w-1/3 flex-shrink-0 cursor-pointer flex flex-col justify-center items-center ${
-                      activeProduct === index ? "opacity-100 " : "opacity-50"
+                    className={`w-1/3 mt-4 min-h-72 flex-shrink-0 cursor-pointer flex flex-col justify-start items-center ${
+                      activeProduct === index ? "opacity-100 scale-100 " : "opacity-50 scale-75"
                     } transition-all duration-1000`}
                     onClick={() => setActiveProduct(index)}
                   >
                     <div className="text-2xl text-white">{product.content}</div>
                     {index === activeProduct && (
                       <div className="text-center">
-                        <div className="mt-2 text-gray-300">
+                        <div className=" text-gray-300">
                           {product.title}
                         </div>
-                        <div className="mt-4 text-gray-300">
+                        <div className=" text-gray-300">
                           {product.description}
                         </div>
                       </div>
