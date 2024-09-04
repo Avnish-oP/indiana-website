@@ -26,7 +26,7 @@ const AnimatedNumber = ({ value }: { value: number }) => {
 
 const StatsBar = () => {
   return (
-    <div className="w-full max-w-6xl mx-auto py-8 px-4 md:px-8">
+    <div className="w-full min-h-[70vh] flex flex-col justify-center max-w-6xl mx-auto py-8 px-4 md:px-8">
       <h2 className="text-4xl  font-extra mb-8 text-gray-800 text-center">Our Achievements</h2>
       <div className="flex flex-col md:flex-row justify-center items-center space-y-6 md:space-y-0 md:space-x-10">
         {stats.map((stat, index) => (

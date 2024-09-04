@@ -33,6 +33,14 @@
   font-variation-settings:
     "slnt" 0;
   }
+  .inter-font-bold{
+    font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  
+  font-variation-settings:
+    "slnt" 0;
+  }
   .inter-font-italic{
     font-family: "Inter", sans-serif;
     font-style: italic;
@@ -72,6 +80,8 @@
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
 }
+
+
 @media (min-width: 768px) {
   .md\\:-space-x-reverse > :not([hidden]) ~ :not([hidden]) {
     --tw-space-x-reverse: 20;
