@@ -38,10 +38,14 @@ function Categories2() {
 
   useEffect(() => {
     if (containerRef.current) {
-      const activeElement = containerRef.current.children[activeCategory] as HTMLElement;
+      const activeElement = containerRef.current.children[
+        activeCategory
+      ] as HTMLElement;
       const containerWidth = containerRef.current.offsetWidth;
       const activeElementWidth = activeElement.offsetWidth;
-      const scrollPosition = activeElement.offsetLeft - (containerWidth / 2 - activeElementWidth / 2);
+      const scrollPosition =
+        activeElement.offsetLeft -
+        (containerWidth / 2 - activeElementWidth / 2);
 
       containerRef.current.style.transform = `translateX(${-scrollPosition}px)`;
       containerRef.current.style.transition = "transform 1s ease-in-out";
@@ -59,12 +63,8 @@ function Categories2() {
         transition: " background-size 0.9s ease-out",
         backgroundBlendMode: "overlay",
         overflow: "hidden",
-
-        
       }}
     >
-      
-
       {/* Overlay */}
       <div className="absolute inset-0 bg-black opacity-60"></div>
 
@@ -75,9 +75,22 @@ function Categories2() {
           {/* Left Button (Previous) */}
           <button
             onClick={prevCategory}
-            className="absolute z-10 bg-white text-gray-800 py-6 px-3 mb-10 rounded-sm bg-opacity-10 hover:bg-opacity-75 transition-all duration-300"
+            className="absolute z-10 bg-white text-gray-800 py-6 px-3 mb-0 rounded-sm bg-opacity-10 hover:bg-opacity-75 transition-all duration-300"
           >
-            &lt;
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              className="w-6 h-6"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M15 19l-7-7 7-7"
+              />
+            </svg>
           </button>
 
           <div className="relative w-full flex justify-start items-end overflow-hidden no-scrollbar snap-x snap-mandatory">
@@ -89,7 +102,7 @@ function Categories2() {
               {categories.map((category, index) => (
                 <div
                   key={index}
-                  className={`flex flex-col justify-center items-center transition-transform duration-1000 ${
+                  className={`flex flex-col justify-center gap-6 items-center transition-transform duration-1000 ${
                     activeCategory === index ? "scale-100" : "scale-100"
                   }`}
                 >
@@ -97,17 +110,18 @@ function Categories2() {
                     onClick={() => setCategory(index)}
                     className={`cursor-pointer   text-center ${
                       activeCategory === index
-                        ? " text-3xl -mt-4 lg:text-[4.5rem] text-gray-200"
-                        : "text-5xl -mt-2 lg:text-[2rem] opacity-50 text-gray-400"
+                        ? " text-3xl  lg:text-7xl text-gray-200"
+                        : "text-5xl  lg:text-4xl opacity-50 text-gray-400"
                     } transition-all duration-1000 text-nowrap`}
+                    style={{
+                      lineHeight: "0",
+                    }}
                   >
                     {category.title}
                   </div>
                   <div className="transition-all duration-1000">
                     <svg
-                      className={`h-8 mt-4 ${
-                        activeCategory === index ? "scale-100 " : "scale-100"
-                      }`}
+                      className={`h-10 mt-4`}
                       viewBox={`0 0 ${category.title.length * 28} 24`}
                       fill="none"
                       xmlns="http://www.w3.org/2000/svg"
@@ -148,9 +162,22 @@ function Categories2() {
           {/* Right Button (Next) */}
           <button
             onClick={nextCategory}
-            className="absolute right-0 bg-white text-gray-800 px-3 py-6 mb-8 rounded-sm bg-opacity-10 hover:bg-opacity-100 transition-all duration-300"
+            className="absolute right-0 bg-white text-gray-800 px-3 py-6 mb-0 rounded-sm bg-opacity-10 hover:bg-opacity-100 transition-all duration-300"
           >
-            &gt;
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              className="w-6 h-6"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M9 5l7 7-7 7"
+              />
+            </svg>
           </button>
         </div>
 
@@ -213,16 +240,16 @@ function Categories2() {
                   <div
                     key={index}
                     className={`w-1/3 mt-4 min-h-72 flex-shrink-0 cursor-pointer flex flex-col justify-start items-center ${
-                      activeProduct === index ? "opacity-100 scale-100 " : "opacity-50 scale-75"
+                      activeProduct === index
+                        ? "opacity-100 scale-100 "
+                        : "opacity-50 scale-75"
                     } transition-all duration-1000`}
                     onClick={() => setActiveProduct(index)}
                   >
                     <div className="text-2xl text-white">{product.content}</div>
                     {index === activeProduct && (
                       <div className="text-center">
-                        <div className=" text-gray-300">
-                          {product.title}
-                        </div>
+                        <div className=" mt-4 text-gray-300">{product.title}</div>
                         <div className=" text-gray-300">
                           {product.description}
                         </div>
