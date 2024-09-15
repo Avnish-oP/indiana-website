@@ -14,9 +14,9 @@ export const categories = [
           description: "Stylish vases to complement any decor.",
           content: (
             <img 
-              src="https://via.placeholder.com/300x300?text=Vases" 
+              src="https://via.placeholder.com/300x200?text=Vases" 
               alt="Vases" 
-              className="h-full w-full object-cover"
+              className="h-full w-full object-cover rounded-lg "
             />
           ),
         },
@@ -25,9 +25,9 @@ export const categories = [
           description: "Elegant table lamps for any setting.",
           content: (
             <img 
-              src="https://via.placeholder.com/300x300?text=Table+Lamps" 
+              src="https://via.placeholder.com/300x200?text=Table+Lamps" 
               alt="Table Lamps" 
-              className="h-full w-full object-cover"
+              className="h-full w-full object-cover rounded-lg "
             />
           ),
         },
@@ -36,9 +36,9 @@ export const categories = [
           description: "Beautiful wall art to add personality to any room.",
           content: (
             <img 
-              src="https://via.placeholder.com/300x300?text=Wall+Art" 
+              src="https://via.placeholder.com/300x200?text=Wall+Art" 
               alt="Wall Art" 
-              className="h-full w-full object-cover"
+              className="h-full w-full object-cover rounded-lg "
             />
           ),
         },
@@ -54,9 +54,9 @@ export const categories = [
           description: "Comfortable and stylish sofas.",
           content: (
             <img 
-              src="https://via.placeholder.com/300x300?text=Sofas" 
+              src="https://via.placeholder.com/300x200?text=Sofas" 
               alt="Sofas" 
-              className="h-full w-full object-cover"
+              className="h-full w-full object-cover rounded-lg "
             />
           ),
         },
@@ -65,9 +65,9 @@ export const categories = [
           description: "Modern coffee tables for your living room.",
           content: (
             <img 
-              src="https://via.placeholder.com/300x300?text=Coffee+Tables" 
+              src="https://via.placeholder.com/300x200?text=Coffee+Tables" 
               alt="Coffee Tables" 
-              className="h-full w-full object-cover"
+              className="h-full w-full object-cover rounded-lg "
             />
           ),
         },
@@ -76,9 +76,9 @@ export const categories = [
           description: "Cozy rugs for a touch of warmth.",
           content: (
             <img 
-              src="https://via.placeholder.com/300x300?text=Rug" 
+              src="https://via.placeholder.com/300x200?text=Rug" 
               alt="Rug" 
-              className="h-full w-full object-cover"
+              className="h-full w-full object-cover rounded-lg "
             />
           ),
         },
@@ -94,9 +94,9 @@ export const categories = [
           description: "Functional and elegant desks.",
           content: (
             <img 
-              src="https://via.placeholder.com/300x300?text=Desks" 
+              src="https://via.placeholder.com/300x200?text=Desks" 
               alt="Desks" 
-              className="h-full w-full object-cover"
+              className="h-full w-full object-cover rounded-lg "
             />
           ),
         },
@@ -105,9 +105,9 @@ export const categories = [
           description: "Comfortable chairs for long working hours.",
           content: (
             <img 
-              src="https://via.placeholder.com/300x300?text=Office+Chairs" 
+              src="https://via.placeholder.com/300x200?text=Office+Chairs" 
               alt="Office Chairs" 
-              className="h-full w-full object-cover"
+              className="h-full w-full object-cover rounded-lg "
             />
           ),
         },
@@ -116,9 +116,9 @@ export const categories = [
           description: "Stylish bookshelves for your home office.",
           content: (
             <img 
-              src="https://via.placeholder.com/300x300?text=Bookshelves" 
+              src="https://via.placeholder.com/300x200?text=Bookshelves" 
               alt="Bookshelves" 
-              className="h-full w-full object-cover"
+              className="h-full w-full object-cover rounded-lg "
             />
           ),
         },
@@ -174,9 +174,9 @@ export const categories = [
           description: "Elegant bar stools for any bar setup.",
           content: (
             <img 
-              src="https://via.placeholder.com/300x300?text=Bar+Stools" 
+              src="https://via.placeholder.com/300x200?text=Bar+Stools" 
               alt="Bar Stools" 
-              className="h-full w-full object-cover"
+              className="h-full w-full object-cover rounded-lg "
             />
           ),
         },
@@ -185,9 +185,9 @@ export const categories = [
           description: "Professional cocktail shakers.",
           content: (
             <img 
-              src="https://via.placeholder.com/300x300?text=Cocktail+Shakers" 
+              src="https://via.placeholder.com/300x200?text=Cocktail+Shakers" 
               alt="Cocktail Shakers" 
-              className="h-full w-full object-cover"
+              className="h-full w-full object-cover rounded-lg "
             />
           ),
         },
@@ -196,9 +196,9 @@ export const categories = [
           description: "High-quality glassware for every drink.",
           content: (
             <img 
-              src="https://via.placeholder.com/300x300?text=Glassware" 
+              src="https://via.placeholder.com/300x200?text=Glassware" 
               alt="Glassware" 
-              className="h-full w-full object-cover"
+              className="h-full w-full object-cover rounded-lg "
             />
           ),
         },
@@ -214,9 +214,9 @@ export const categories = [
           description: "Durable mats for high-traffic areas.",
           content: (
             <img 
-              src="https://via.placeholder.com/300x300?text=Entrance+Mats" 
+              src="https://via.placeholder.com/300x200?text=Entrance+Mats" 
               alt="Entrance Mats" 
-              className="h-full w-full object-cover"
+              className="h-full w-full object-cover rounded-lg "
             />
           ),
         },
@@ -225,9 +225,9 @@ export const categories = [
           description: "Comfortable mats for standing workstations.",
           content: (
             <img 
-              src="https://via.placeholder.com/300x300?text=Anti-Fatigue+Mats" 
+              src="https://via.placeholder.com/300x200?text=Anti-Fatigue+Mats" 
               alt="Anti-Fatigue Mats" 
-              className="h-full w-full object-cover"
+              className="h-full w-full object-cover rounded-lg "
             />
           ),
         },
@@ -236,9 +236,9 @@ export const categories = [
           description: "Stylish rugs to enhance your decor.",
           content: (
             <img 
-              src="https://via.placeholder.com/300x300?text=Decorative+Rugs" 
+              src="https://via.placeholder.com/300x200?text=Decorative+Rugs" 
               alt="Decorative Rugs" 
-              className="h-full w-full object-cover"
+              className="h-full w-full object-cover rounded-lg "
             />
           ),
         },
@@ -254,9 +254,9 @@ export const categories = [
           description: "Easy-to-apply wall stickers in various designs.",
           content: (
             <img 
-              src="https://via.placeholder.com/300x300?text=Wall+Stickers" 
+              src="https://via.placeholder.com/300x200?text=Wall+Stickers" 
               alt="Wall Stickers" 
-              className="h-full w-full object-cover"
+              className="h-full w-full object-cover rounded-lg "
             />
           ),
         },
@@ -265,9 +265,9 @@ export const categories = [
           description: "Stylish and functional wall clocks.",
           content: (
             <img 
-              src="https://via.placeholder.com/300x300?text=Wall+Clocks" 
+              src="https://via.placeholder.com/300x200?text=Wall+Clocks" 
               alt="Wall Clocks" 
-              className="h-full w-full object-cover"
+              className="h-full w-full object-cover rounded-lg "
             />
           ),
         },
@@ -276,9 +276,9 @@ export const categories = [
           description: "Elegant frames for your photos and art.",
           content: (
             <img 
-              src="https://via.placeholder.com/300x300?text=Picture+Frames" 
+              src="https://via.placeholder.com/300x200?text=Picture+Frames" 
               alt="Picture Frames" 
-              className="h-full w-full object-cover"
+              className="h-full w-full object-cover rounded-lg "
             />
           ),
         },
@@ -294,9 +294,9 @@ export const categories = [
           description: "High-quality cookware for every kitchen.",
           content: (
             <img 
-              src="https://via.placeholder.com/300x300?text=Cookware" 
+              src="https://via.placeholder.com/300x200?text=Cookware" 
               alt="Cookware" 
-              className="h-full w-full object-cover"
+              className="h-full w-full object-cover rounded-lg "
             />
           ),
         },
@@ -305,9 +305,9 @@ export const categories = [
           description: "Complete dining sets for your home or restaurant.",
           content: (
             <img 
-              src="https://via.placeholder.com/300x300?text=Dining+Sets" 
+              src="https://via.placeholder.com/300x200?text=Dining+Sets" 
               alt="Dining Sets" 
-              className="h-full w-full object-cover"
+              className="h-full w-full object-cover rounded-lg "
             />
           ),
         },
@@ -316,9 +316,9 @@ export const categories = [
           description: "Elegant cutlery for every meal.",
           content: (
             <img 
-              src="https://via.placeholder.com/300x300?text=Cutlery" 
+              src="https://via.placeholder.com/300x200?text=Cutlery" 
               alt="Cutlery" 
-              className="h-full w-full object-cover"
+              className="h-full w-full object-cover rounded-lg "
             />
           ),
         },
@@ -334,9 +334,9 @@ export const categories = [
           description: "Soft and absorbent towels.",
           content: (
             <img 
-              src="https://via.placeholder.com/300x300?text=Towels" 
+              src="https://via.placeholder.com/300x200?text=Towels" 
               alt="Towels" 
-              className="h-full w-full object-cover"
+              className="h-full w-full object-cover rounded-lg "
             />
           ),
         },
@@ -345,9 +345,9 @@ export const categories = [
           description: "Stylish shower curtains to match your decor.",
           content: (
             <img 
-              src="https://via.placeholder.com/300x300?text=Shower+Curtains" 
+              src="https://via.placeholder.com/300x200?text=Shower+Curtains" 
               alt="Shower Curtains" 
-              className="h-full w-full object-cover"
+              className="h-full w-full object-cover rounded-lg "
             />
           ),
         },
@@ -356,9 +356,9 @@ export const categories = [
           description: "Comfortable mats for a slip-free bathroom.",
           content: (
             <img 
-              src="https://via.placeholder.com/300x300?text=Bath+Mats" 
+              src="https://via.placeholder.com/300x200?text=Bath+Mats" 
               alt="Bath Mats" 
-              className="h-full w-full object-cover"
+              className="h-full w-full object-cover rounded-lg "
             />
           ),
         },
@@ -374,9 +374,9 @@ export const categories = [
           description: "Decorations for various holidays.",
           content: (
             <img 
-              src="https://via.placeholder.com/300x300?text=Holiday+Decorations" 
+              src="https://via.placeholder.com/300x200?text=Holiday+Decorations" 
               alt="Holiday Decorations" 
-              className="h-full w-full object-cover"
+              className="h-full w-full object-cover rounded-lg "
             />
           ),
         },
@@ -385,9 +385,9 @@ export const categories = [
           description: "Items for the summer season.",
           content: (
             <img 
-              src="https://via.placeholder.com/300x300?text=Summer+Essentials" 
+              src="https://via.placeholder.com/300x200?text=Summer+Essentials" 
               alt="Summer Essentials" 
-              className="h-full w-full object-cover"
+              className="h-full w-full object-cover rounded-lg "
             />
           ),
         },
@@ -396,9 +396,9 @@ export const categories = [
           description: "Warm and cozy items for winter.",
           content: (
             <img 
-              src="https://via.placeholder.com/300x300?text=Winter+Gear" 
+              src="https://via.placeholder.com/300x200?text=Winter+Gear" 
               alt="Winter Gear" 
-              className="h-full w-full object-cover"
+              className="h-full w-full object-cover rounded-lg "
             />
           ),
         },
